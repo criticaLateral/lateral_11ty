@@ -1,0 +1,217 @@
+@import 'normalize'
+@import 'spacing'
+@import 'breakpoints'
+  
+// Dirty Fonts
+  
+@font-face
+  font-family: 'ABCMarist-Book'
+  font-weight: 400
+  font-style: normal
+  src: url('src/assets/fonts/ABCMarist-Book.woff') format('woff')
+
+@font-face
+  font-family: 'ABCMarist-BookItalic'
+  font-weight: 400
+  font-style: italic
+  src: url('src/assets/fonts/ABCMarist-BookItalic.woff') format('woff')
+
+@font-face
+  font-family: 'ABCMarist-Medium'
+  font-weight: 600
+  font-style: normal
+  src: url('src/assets/fonts/ABCMarist-Medium.woff') format('woff')
+
+@font-face
+  font-family: 'ABCMarist-SemiBold'
+  font-weight: 700
+  font-style: normal
+  src: url('src/assets/fonts/ABCMarist-SemiBold.woff') format('woff')
+
+@font-face
+  font-family: 'Favorit-Light'
+  font-weight: 200
+  font-style: normal
+  src: url('src/assets/fonts/Favorit-Light.woff ') format('woff')
+
+// Dirty Variables
+
+$content-width: 800px
+
+$color-background: #F5F5F5
+
+$color-corp-green: #D3FE50
+$color-corp-darker: #3D3B3B
+$color-corp-dark: #878787
+$color-corp-light: #C5C5C5
+$color-corp-lighter: #F7F7F7
+
+$color-comp-green-01: #F1FFBA
+$color-comp-green-02: #FAFFE7
+
+$border-size: 2px
+
+// Dirty Mixins
+=reset
+  margin: 0
+  padding: 0
+  border: 0
+
+=reset_box
+  position: relative
+  display: inline-block
+  box-sizing: border-box
+  width: auto
+  height: auto
+  margin: 0
+  padding: 0
+  border: 0
+
+// Basic styles
+body
+  background: $color-background
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  text-rendering: optimizeLegibility
+  font-family: sans-serif
+
+// Layout
+.global-menu
+  +reset_box
+  padding: $space-s $space-l
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .logo
+    +reset_box
+    display: block
+    width: 330px
+    height: 50px
+    background-image: url('../../../src/assets/media/logo.svg')
+    background-size: 70%
+    background-repeat: no-repeat
+    background-position: center left
+    a
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-indent: 1000em
+      width: 100%
+      height: 100%
+
+  .navigation 
+    ul
+      +reset_box
+      display: flex
+      gap: $space-s
+      li
+        +reset_box
+        a
+          color: $color-corp-darker
+          font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+          font-size: 1.4rem
+          text-decoration: none
+          &:hover
+            border-bottom: 2px solid $color-corp-darker
+        &.selected
+          a
+            border-bottom: 2px solid $color-corp-light
+            &:hover
+              border-bottom: 2px solid $color-corp-darker
+
+.article
+  &-header
+    width: 100%
+    background: black
+    color: white
+    display: flex
+    margin-bottom: $space-xxl
+    border-top: $border-size solid black
+    border-bottom: $border-size solid black
+    gap: $border-size
+    background: black
+    &-media
+      +reset_box
+      display: block
+      flex-basis: 50%
+      padding-bottom: 50%
+      video
+        position: absolute
+        display: block
+        box-sizing: border-box
+        width: 100%
+        height: 100%
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+    &-content
+      flex-basis: 50%
+      display: flex
+      flex-direction: column
+  &-body
+    max-width: $content-width
+    margin: auto
+
+// Content
+
+.article-title
+  +reset
+  display: block
+  padding: $space-m $space-xl
+  flex-grow: 3
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background: $color-corp-darker
+  gap: $space-m
+  h1
+    +reset
+    font-size: 5rem
+    font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-weight: 200
+    line-height: 5rem
+  h2
+    +reset
+    font-size: 1.8rem
+    font-family: 'ABCMarist-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-weight: 200
+    font-variant: small-caps
+  p
+    +reset
+    font-size: 2rem
+    line-height: 3rem
+    font-family: 'ABCMarist-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-weight: 200
+.article-meta
+  +reset
+  li
+    +reset
+    display: block
+    padding: $space-m $space-xl
+    border-top: $border-size solid black
+    font-family: 'ABCMarist-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 1.3rem
+    color: $color-corp-darker
+  &-author
+    background: $color-comp-green-01
+    letter-spacing: 0.05rem
+    strong
+      font-family: 'ABCMarist-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif
+      font-variant: small-caps
+  &-date
+    background: $color-comp-green-02
+    font-style: italic
+
+
+.article-body 
+  p
+    font-family: 'ABCMarist-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-size: 1.5rem
+    line-height: 2.7rem
+    margin-bottom: $space-xl
+    &:first-of-type
+      &::first-letter
+        font-size: 3rem
+        text-transform: uppercase
+        float: left

@@ -1,0 +1,20 @@
+{
+  "name": "lateral",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/assets/styles/sass:_site/src/assets/styles",
+    "build:sass": "sass src/assets/styles/sass:_site/src/assets/styles",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:eleventy watch:sass",
+    "build": "npm-run-all build:eleventy build:sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
