@@ -11,6 +11,12 @@
   src: url('src/assets/fonts/ABCMarist-Book.woff') format('woff')
 
 @font-face
+  font-family: 'test-tiempos-text-regular'
+  font-weight: 400
+  font-style: normal
+  src: url('src/assets/fonts/test-tiempos-text-regular.woff2') format('woff2')
+
+@font-face
   font-family: 'ABCMarist-BookItalic'
   font-weight: 400
   font-style: italic
@@ -122,19 +128,18 @@ body
 .article
   &-header
     width: 100%
-    background: black
     color: white
-    display: flex
     margin-bottom: $space-xxl
     border-top: $border-size solid black
-    border-bottom: $border-size solid black
     gap: $border-size
-    background: black
     &-media
       +reset_box
       display: block
-      flex-basis: 50%
+      width: 100vw
       padding-bottom: 50%
+      border-bottom: $border-size solid black
+      overflow: hidden
+      background: #BCE247
       video
         position: absolute
         display: block
@@ -145,10 +150,14 @@ body
         right: 0
         bottom: 0
         left: 0
+        z-index: 0
     &-content
-      flex-basis: 50%
+      position: relative
+      max-width: 100%
+      margin: auto
+      margin-top: -100px
       display: flex
-      flex-direction: column
+      z-index: 10
   &-body
     max-width: $content-width
     margin: auto
@@ -206,12 +215,15 @@ body
 
 .article-body 
   p
-    font-family: 'ABCMarist-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif
-    font-size: 1.5rem
-    line-height: 2.7rem
+    font-family: 'test-tiempos-text-regular', serif
+    font-family: 'test-tiempos-text-regular', serif
+    font-size: 1.6rem
+    line-height: 3rem
     margin-bottom: $space-xl
     &:first-of-type
       &::first-letter
-        font-size: 3rem
+        font-size: 4rem
         text-transform: uppercase
         float: left
+        margin: 15px 20px 10px 0
+        border-bottom: 4px solid red
