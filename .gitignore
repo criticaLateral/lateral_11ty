@@ -3,9 +3,6 @@
 # dependencies
 /node_modules
 
-# production
-/_site
-
 # misc
 .DS_Store
 .vscode
