@@ -1,0 +1,3 @@
+- npm install @11ty/eleventy
+- npm install sass --save-dev
+- npm start
