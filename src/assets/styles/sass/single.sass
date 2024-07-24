@@ -43,6 +43,7 @@
 // Dirty Variables
 
 $content-width: 800px
+$max-width: 1920px
 
 $color-background: #F5F5F5
 
@@ -80,6 +81,7 @@ body
   -moz-osx-font-smoothing: grayscale
   text-rendering: optimizeLegibility
   font-family: sans-serif
+  background: #F7F6F2
 
 // Layout
 .global-menu
@@ -126,38 +128,73 @@ body
               border-bottom: 2px solid $color-corp-darker
 
 .article
+  display: block
+  margin: auto
+  max-width: $max-width
   &-header
     width: 100%
     color: white
     margin-bottom: $space-xxl
-    border-top: $border-size solid black
-    gap: $border-size
-    &-media
-      +reset_box
-      display: block
-      width: 100vw
-      padding-bottom: 50%
-      border-bottom: $border-size solid black
-      overflow: hidden
-      background: #BCE247
-      video
-        position: absolute
-        display: block
-        box-sizing: border-box
-        width: 100%
+    border: $border-size solid black
+    display: grid
+    &.portrait
+      grid-template-columns: 1fr 1fr
+      .article-header-content
         height: 100%
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        z-index: 0
-    &-content
-      position: relative
-      max-width: 100%
-      margin: auto
-      margin-top: -100px
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 10fr 10fr max-content
+      .article-title
+        border-bottom: $border-size solid black
+      .article-subtitle
+        border-bottom: $border-size solid black
+      &.left
+        .article-header-image
+          order: 0
+          border-right: $border-size solid black
+        .article-header-content
+          order: 1
+      &.right
+        .article-header-image
+          order: 1
+          border-left: $border-size solid black
+        .article-header-content
+          order: 0
+    &.landscape
+      grid-template-columns: 1fr
+      grid-template-rows: min-content min-content
+      .article-header-content
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr max-content
+      .article-title
+        border-bottom: $border-size solid black
+      .article-subtitle
+        border-left: $border-size solid black
+        grid-column: 2 / 2
+        grid-row: 1 / span 2
+      &.top
+        .article-header-image
+          order: 0
+          border-bottom: $border-size solid black
+        .article-header-content
+          order: 1
+      &.bottom
+        .article-header-image
+          order: 1
+        .article-header-content
+          border-bottom: $border-size solid black
+          order: 0
+    &-image
       display: flex
-      z-index: 10
+      img
+        +reset_box
+        display: block
+        object-fit: cover
+        width: 100%
+        height: auto
+    &-content
+      +reset_box
   &-body
     max-width: $content-width
     margin: auto
@@ -166,26 +203,27 @@ body
 
 .article-title
   +reset
-  display: block
-  padding: $space-m $space-xl
-  flex-grow: 3
   display: flex
+  padding: $space-m $space-xl
   flex-direction: column
   justify-content: center
-  background: $color-corp-darker
-  gap: $space-m
+  background: #E0D9CA
+  color: #222
   h1
     +reset
     font-size: 5rem
     font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
     font-weight: 200
     line-height: 5rem
-  h2
-    +reset
-    font-size: 1.8rem
-    font-family: 'ABCMarist-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif
-    font-weight: 200
-    font-variant: small-caps
+.article-subtitle
+  +reset
+  padding: $space-m $space-xl
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background: #E2E9E1
+  color: #222222
+  gap: $space-m
   p
     +reset
     font-size: 2rem
@@ -194,14 +232,18 @@ body
     font-weight: 200
 .article-meta
   +reset
+  display: flex
+  justify-content: center
   li
     +reset
     display: block
-    padding: $space-m $space-xl
-    border-top: $border-size solid black
+    flex-basis: 50%
+    padding: $space-s $space-xl
     font-family: 'ABCMarist-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif
     font-size: 1.3rem
     color: $color-corp-darker
+    &:first-of-type
+      border-right: $border-size solid black
   &-author
     background: $color-comp-green-01
     letter-spacing: 0.05rem

@@ -270,6 +270,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: sans-serif;
+  background: #F7F6F2;
 }
 
 .global-menu {
@@ -349,14 +350,82 @@ body {
   border-bottom: 2px solid #3D3B3B;
 }
 
+.article {
+  display: block;
+  margin: auto;
+  max-width: 1920px;
+}
 .article-header {
   width: 100%;
   color: white;
   margin-bottom: 80px;
-  border-top: 2px solid black;
-  gap: 2px;
+  border: 2px solid black;
+  display: grid;
 }
-.article-header-media {
+.article-header.portrait {
+  grid-template-columns: 1fr 1fr;
+}
+.article-header.portrait .article-header-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10fr 10fr max-content;
+}
+.article-header.portrait .article-title {
+  border-bottom: 2px solid black;
+}
+.article-header.portrait .article-subtitle {
+  border-bottom: 2px solid black;
+}
+.article-header.portrait.left .article-header-image {
+  order: 0;
+  border-right: 2px solid black;
+}
+.article-header.portrait.left .article-header-content {
+  order: 1;
+}
+.article-header.portrait.right .article-header-image {
+  order: 1;
+  border-left: 2px solid black;
+}
+.article-header.portrait.right .article-header-content {
+  order: 0;
+}
+.article-header.landscape {
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+}
+.article-header.landscape .article-header-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr max-content;
+}
+.article-header.landscape .article-title {
+  border-bottom: 2px solid black;
+}
+.article-header.landscape .article-subtitle {
+  border-left: 2px solid black;
+  grid-column: 2/2;
+  grid-row: 1/span 2;
+}
+.article-header.landscape.top .article-header-image {
+  order: 0;
+  border-bottom: 2px solid black;
+}
+.article-header.landscape.top .article-header-content {
+  order: 1;
+}
+.article-header.landscape.bottom .article-header-image {
+  order: 1;
+}
+.article-header.landscape.bottom .article-header-content {
+  border-bottom: 2px solid black;
+  order: 0;
+}
+.article-header-image {
+  display: flex;
+}
+.article-header-image img {
   position: relative;
   display: inline-block;
   box-sizing: border-box;
@@ -366,31 +435,19 @@ body {
   padding: 0;
   border: 0;
   display: block;
-  width: 100vw;
-  padding-bottom: 50%;
-  border-bottom: 2px solid black;
-  overflow: hidden;
-  background: #BCE247;
-}
-.article-header-media video {
-  position: absolute;
-  display: block;
-  box-sizing: border-box;
+  object-fit: cover;
   width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 0;
+  height: auto;
 }
 .article-header-content {
   position: relative;
-  max-width: 100%;
-  margin: auto;
-  margin-top: -100px;
-  display: flex;
-  z-index: 10;
+  display: inline-block;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .article-body {
   max-width: 800px;
@@ -401,14 +458,12 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
-  display: block;
-  padding: 30px 50px;
-  flex-grow: 3;
   display: flex;
+  padding: 30px 50px;
   flex-direction: column;
   justify-content: center;
-  background: #3D3B3B;
-  gap: 30px;
+  background: #E0D9CA;
+  color: #222;
 }
 .article-title h1 {
   margin: 0;
@@ -419,16 +474,20 @@ body {
   font-weight: 200;
   line-height: 5rem;
 }
-.article-title h2 {
+
+.article-subtitle {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 1.8rem;
-  font-family: "ABCMarist-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 200;
-  font-variant: small-caps;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #E2E9E1;
+  color: #222222;
+  gap: 30px;
 }
-.article-title p {
+.article-subtitle p {
   margin: 0;
   padding: 0;
   border: 0;
@@ -442,17 +501,22 @@ body {
   margin: 0;
   padding: 0;
   border: 0;
+  display: flex;
+  justify-content: center;
 }
 .article-meta li {
   margin: 0;
   padding: 0;
   border: 0;
   display: block;
-  padding: 30px 50px;
-  border-top: 2px solid black;
+  flex-basis: 50%;
+  padding: 20px 50px;
   font-family: "ABCMarist-Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   color: #3D3B3B;
+}
+.article-meta li:first-of-type {
+  border-right: 2px solid black;
 }
 .article-meta-author {
   background: #F1FFBA;
