@@ -2,7 +2,6 @@
 
 ## Instalar dependencias
 
-
 ```sh
 npm install @11ty/eleventy
 npm install sass --save-dev
