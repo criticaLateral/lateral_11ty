@@ -1,0 +1,6 @@
+# ignorar artefactos
+_site
+node_modules
+
+# ejemplo de ignorar todos los archivos HTML
+# **/*.html
