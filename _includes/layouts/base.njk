@@ -6,35 +6,34 @@
 		<title>{{ title or metadata.title }}</title>
 		<meta name="description" content="{{ description or metadata.description }}">
 
-		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
-		{#- Add the contents of a file to the bundle #}
-		{%- css %}{% include "public/css/app.css" %}{% endcss %}
+		<link rel="stylesheet" href="/css/app.css">
 	</head>
-	<body>
+	<body class="global">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-		<header>
-			<a href="/" class="home-link">{{ metadata.title }}</a>
 
-			{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
-				<ul class="nav">
-				{%- for entry in collections.all | eleventyNavigation %}
-					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-				{%- endfor %}
-				</ul>
-			</nav>
-		</header>
+    <header class="global-menu">
+      <h1 class="logo"><a href="#">Lateral</a></h1>
+      <nav  class="navigation">
+				<ul>
+					<h2 class="visually-hidden">Top level navigation menu</h2>
+						<li><a href="/" class="home-link">{{ metadata.title }}</a></li>
+					{%- for entry in collections.all | eleventyNavigation %}
+						<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+					{%- endfor %}
+        </ul>
+      </nav>
+    </header>
 
-		<main id="skip">
+		<main class="global-content" id="skip">
 			{{ content | safe }}
 		</main>
-
-		<footer></footer>
+		
+    <footer class="global-footer">
+    </footer>
 
 		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
 	</body>

@@ -1,28 +1,42 @@
 ---
 layout: layouts/base.njk
 ---
-{# Only include the syntax highlighter CSS on blog posts #}
-{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
-{%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %}
-<h1>{{ title }}</h1>
+<article class="article">
+	<header class="article-header landscape top">
+		<div class="article-header-image">
+			<img src="../src/assets/media/image_landscape.jpg" alt="test">
+		</div>
+		<div class="article-header-content">
+			<div class="article-title">
+				<h1>{{ title }}</h1>
+			</div>
+			<div class="article-subtitle">
+				<p>En el fútbol, la figura del rival como enemigo de la patria suele durar lo que dura un partido, pero a veces va más allá y a nadie le extraña demasiado cuando ocurre: la postal de los chilenos apedreando la embajada de Brasil en 1989 ya es un ejemplo clásico de estas perversiones.</p>
 
-<ul class="post-metadata">
-	<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
-	{%- for tag in tags | filterTagList %}
-	{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-	<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
-	{%- endfor %}
-</ul>
-
-{{ content | safe }}
-
-{%- if collections.posts %}
-{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-{%- set nextPost = collections.posts | getNextCollectionItem %}
-{%- if nextPost or previousPost %}
-<ul class="links-nextprev">
-	{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-	{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-</ul>
-{%- endif %}
-{%- endif %}
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+					<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
+				{%- endfor %}
+			</div>
+			<ul class="article-meta">
+				<li class="article-meta-author">Por <strong>Álvaro Bisama</strong></li>
+				<li class="article-meta-date"><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+			</ul>
+		</div>
+	</header>
+	<div class="article-body">
+		{{ content | safe }}
+	</div>
+</article>
+<aside class="related">
+	{%- if collections.posts %}
+	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+	{%- set nextPost = collections.posts | getNextCollectionItem %}
+	{%- if nextPost or previousPost %}
+	<ul class="links-nextprev">
+		{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+		{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+	</ul>
+	{%- endif %}
+	{%- endif %}
+</aside>
