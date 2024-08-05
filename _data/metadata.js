@@ -1,6 +1,6 @@
 module.exports = {
 	title: "Lateral",
-	url: "https://lateral.cl/",
+	url: "https://criticalateral.github.io/lateral_11ty/build/",
 	language: "es",
 	description: "Un sitio web para el equipo de lateral",
 	author: {
