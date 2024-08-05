@@ -2,67 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://example.com/blog/firstpost/</loc>
+		<loc>https://lateral.cl/blog/firstpost/</loc>
 		<lastmod>2018-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/secondpost/</loc>
-		<lastmod>2018-07-04</lastmod>
+		<loc>https://lateral.cl/blog/fourthpost/</loc>
+		<lastmod>2018-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/thirdpost/</loc>
-		<lastmod>2018-08-24</lastmod>
+		<loc>https://lateral.cl/blog/secondpost/</loc>
+		<lastmod>2018-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/fourthpost/</loc>
-		<lastmod>2018-09-30</lastmod>
+		<loc>https://lateral.cl/blog/thirdpost/</loc>
+		<lastmod>2018-05-01</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/fifthpost/</loc>
-		<lastmod>2023-01-23</lastmod>
-	</url>
-	
-	<url>
-		<loc>https://example.com/about/</loc>
+		<loc>https://lateral.cl/about/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/blog/</loc>
+		<loc>https://lateral.cl/blog/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/</loc>
+		<loc>https://lateral.cl/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/</loc>
+		<loc>https://lateral.cl/tags/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/another-tag/</loc>
+		<loc>https://lateral.cl/tags/florencio-ceballos/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/number-2/</loc>
+		<loc>https://lateral.cl/tags/columnas/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/second-tag/</loc>
+		<loc>https://lateral.cl/tags/marisol-garcia/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/posts-with-two-tags/</loc>
+		<loc>https://lateral.cl/tags/entrevistas/</loc>
+		<lastmod>2024-07-16</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://lateral.cl/tags/rafael-clemente/</loc>
+		<lastmod>2024-07-16</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://lateral.cl/tags/reportajes/</loc>
+		<lastmod>2024-07-16</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://lateral.cl/tags/esteban-abarzua/</loc>
+		<lastmod>2024-07-16</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://lateral.cl/tags/futbol/</loc>
 		<lastmod>2024-07-16</lastmod>
 	</url>
 </urlset>
