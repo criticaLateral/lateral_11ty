@@ -9,6 +9,7 @@ tags:
 featured_image: image_portrait.jpg
 thumbnail_image: image_portrait.jpg
 template: portrait left
+permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 ---
 Entre admirar y ser admirada Marta D. Riezu prefiere lo primero, y así lo aclara a cuarenta y tres páginas de largar Agua y jabón. Apuntes sobre elegancia involuntaria (Anagrama, 2022), acaso para zanjar tempranamente lo que luego podría prestarse a confusión.
 

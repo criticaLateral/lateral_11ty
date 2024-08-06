@@ -9,6 +9,7 @@ tags:
 featured_image: image_portrait.jpg
 thumbnail_image: image_portrait.jpg
 template: portrait right
+permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 ---
 El proceso constituyente que se avecina tiene por objeto comenzar a reparar la fractura en el pacto social que dejó expuesta la revuelta de octubre. La operación es abrumadora y un contexto de pandemia, crisis económica, agitación social, violencia callejera, brutalidad policial y deslegitimación transversal de la clase dirigente no lo hace más fácil.  
 
