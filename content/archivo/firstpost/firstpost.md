@@ -1,5 +1,5 @@
 ---
-title: En la cancha se ven los malos
+title: 'En la cancha se ven los malos'
 description: 'En el fútbol, la figura del rival como enemigo de la patria suele durar lo que dura un partido, pero a veces va más allá y a nadie le extraña demasiado cuando ocurre: la postal de los chilenos apedreando la embajada de Brasil en 1989 ya es un ejemplo clásico de estas perversiones.'
 author: 'Esteban Abarzúa'
 date: 2018-05-01
@@ -8,8 +8,9 @@ tags:
   - Fútbol
 featured_image: image_landscape.jpg
 thumbnail_image: image_landscape.jpg
-template: landscape top
-permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
+template: landscape bottom
+permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
+isFeatured: true
 ---
 
 La situación dramática del deporte ha sido capaz de producir cimas de incuestionable valor patrimonial, como la siguiente frase del futbolista chileno Luis Chavarría después de un compromiso contra Uruguay, en noviembre de 1996: «Estoy contento por mi debut, lo hice bien y, gracias a Dios, Francescoli salió lesionado». Chavarría, natural de Monte Águila, un hombre salido del Chile profundo, describió de esta manera un hecho que además resume su palmarés deportivo: en su primer partido por la Roja le pidieron bajo cuerda que le hiciera una futbolera demostración de cariño al mejor hombre de los rivales, y él cumplió con creces. Francescoli abandonó el juego por un golpe suyo y, lejos de ser reprobada, su conducta quedó tipificada como objeto de culto en aquel narcisismo nacional hipertrofiado que se viste con los colores de la Selección. Chavarría es un héroe del género picaresco, pedrourdemaliano y atarantado si se quiere, pero héroe al fin. El discurso acomodaticio de los medios de comunicación favorece el modelo: eso que no se hace, si es un poquito, no le hace mal a nadie. En el uso del lenguaje la malicia sustituye a la maldad sin mojar la camiseta.

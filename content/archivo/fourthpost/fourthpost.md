@@ -9,7 +9,8 @@ tags:
 featured_image: image_landscape.jpg
 thumbnail_image: image_landscape.jpg
 template: landscape bottom
-permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
+permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
+isFeatured: false
 ---
 Todo lo que sube, acaba por bajar y la Estación Espacial Internacional (ISS) no es una excepción. La NASA ha adjudicado a SpaceX el proyecto de construcción del vehículo que se utilizará para hacerla caer dentro de pocos años. Quizás tan pronto como el 2030.
 
