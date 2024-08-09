@@ -11,8 +11,6 @@ numberOfLatestPostsToShow: 4
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
-
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
 <div class="articles">
@@ -20,17 +18,22 @@ numberOfLatestPostsToShow: 4
 	<article class="article {% if post.data.isFeatured ==true %}featured{% endif %}">
 		<a href="{{ post.url }}">
 			{% if post.data.thumbnail_image %}
-				<figure>
+				<figure class="article-image">
 					<img	src="/media/{{ post.data.thumbnail_image }}"/>
 				</figure>
 			{% endif %}
-			{% if post.data.title %}
-				<h3>{{ post.data.title }}</h3>
-			{% endif %}
-			{% if post.data.description %}
-				<p>{{ post.data.description }}</p>
-			{% endif %}
-			<time class="postlist-date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time>
+			<div class="article-description">
+				{% if post.data.title %}
+					<h3 class="article-title">{{ post.data.title }}</h3>
+				{% endif %}
+				{% if post.data.description %}
+					<p class="article-subtitle">{{ post.data.description }}</p>
+				{% endif %}
+				<ul class="article-meta">
+					<li class="article-meta-author">{{ post.data.author }}</li>
+					<li class="article-meta-date"><time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time></li>
+				</ul>
+			</div>
 		</a>
 	</article>
 {% endfor %}

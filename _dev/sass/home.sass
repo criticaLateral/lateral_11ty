@@ -7,19 +7,102 @@
   .articles
     +reset
     display: grid
-    grid-template-columns: 1fr 1fr
-    grid-template-rows: masonry
-    border: $border-size solid black
+    grid-template-columns: 1fr 1fr 1fr
+    justify-items: stretch
+    align-items: stretch
+    border: ($border-size)/2 solid black
     .article
       +reset_box
+      order: 1
+      border: ($border-size)/2 solid black
+      a
+        text-decoration: none
+        display: flex
+        flex-direction: column
+        width: 100%
+        height: 100%
+      &.featured
+        grid-column: 1 / span 3
+        order: 0
+        .article-description
+          width: 50%
+          position: absolute
+          bottom: 0
+          right: 0
+          border: $border-size solid black
+          border-bottom: 0
+          border-right: 0 
+      .article-description
+        display: flex
+        flex-direction: column
+        flex-grow: 10
+        .article-title
+          +reset
+          display: flex
+          flex-grow: 2
+          padding: $space-s
+          flex-direction: column
+          justify-content: center
+          background: #E0D9CA
+          color: #222
+          font-size: 2rem
+          line-height: 2.4rem
+          font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+          font-weight: 200
+          border-bottom: $border-size solid black
+        .article-subtitle
+          +reset
+          padding: $space-s
+          display: flex
+          flex-grow: 2
+          flex-direction: column
+          justify-content: center
+          background: #E2E9E1
+          color: #222222
+          gap: $space-m
+          font-size: 1.2rem
+          line-height: 1.6rem
+          font-family: 'test-tiempos-text-regular', serif
+          font-weight: 200
+          border-bottom: $border-size solid black
+        .article-meta
+          +reset
+          display: flex
+          justify-content: center
+          li
+            +reset
+            display: block
+            flex-basis: 50%
+            padding: $space-xs $space-s
+            font-family: 'test-tiempos-text-regular', serif
+            font-size: 1rem
+            color: $color-corp-darker
+            &:first-of-type
+              border-right: $border-size solid black
+          &-author
+            background: $color-comp-green-01
+            letter-spacing: 0.05rem
+            strong
+              font-family: 'test-tiempos-text-regular', serif
+              font-variant: small-caps
+          &-date
+            background: $color-comp-green-02
+            font-style: italic
       figure
         +reset_box
         width: 100%
-        height: 300px
+        padding-bottom: 50%
         display: flex
+        overflow: hidden
+        position: relative
+        border-bottom: $border-size solid black
         img
-          +reset_box
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
           display: block
-          object-fit: cover
+          object-fit: fill
           width: 100%
           height: auto
