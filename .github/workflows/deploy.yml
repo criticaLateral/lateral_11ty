@@ -1,0 +1,24 @@
+name: deploy con 11ty
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.7
+      - name: usar Node.js 20.x Node.js 20.x
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 20.x
+      - name: bajar modulos Node
+        run: npm ci
+        env:
+          CI: true
+      - name: subir artefactos
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
+          name: dist
