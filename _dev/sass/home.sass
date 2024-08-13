@@ -24,14 +24,19 @@
       &.featured
         grid-column: 1 / span 3
         order: 0
+        a
+          display: grid
+          grid-template-columns: 2fr 1fr
+        .article-image
+          border: 0
         .article-description
-          width: 50%
-          position: absolute
-          bottom: 0
-          right: 0
-          border: $border-size solid black
-          border-bottom: 0
-          border-right: 0 
+          border-left: $border-size solid black
+          .article-title
+            font-size: 4rem
+            line-height: 4.2rem
+          .article-subtitle
+            font-size: 2rem
+            line-height: 2.6rem
       .article-description
         display: flex
         flex-direction: column
@@ -45,7 +50,7 @@
           justify-content: center
           background: #E0D9CA
           color: #222
-          font-size: 2rem
+          font-size: 2.2rem
           line-height: 2.4rem
           font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
           font-weight: 200
@@ -88,21 +93,29 @@
           &-date
             background: $color-comp-green-02
             font-style: italic
-      figure
+      .article-image
         +reset_box
         width: 100%
-        padding-bottom: 50%
-        display: flex
         overflow: hidden
-        position: relative
         border-bottom: $border-size solid black
-        img
-          position: absolute
-          top: 0
-          left: 0
-          right: 0
-          bottom: 0
-          display: block
-          object-fit: fill
+        .article-media
           width: 100%
-          height: auto
+          height: 100%
+          object-fit: fill
+
+
+@keyframes my-animation
+  0%
+    filter: none
+  20%
+    filter: url(#filter)
+  50%
+    filter: url(#filter-2)
+  80%
+    filter: url(#filter-3)
+  94%
+    filter: none
+
+#glitch:hover
+  filter: url(#filter)
+  animation: 0.8s my-animation alternate infinite

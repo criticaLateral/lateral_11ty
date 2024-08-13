@@ -1,7 +1,29 @@
 ---
 layout: layouts/base.njk
+numberOfLatestPostsToShow: 3
 ---
+
+{# MD structure for a post (example):
+---
+title: string
+description: string
+author: string
+date: 2018-05-01
+tags:
+  - Author
+  - Tag 1
+	- Tag 2
+featured_image: filename.jpg
+thumbnail_image: filename.jpg
+template: landscape bottom  | landscape top | portrait left | portrait right
+permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
+isFeatured: boolean
+---
+#}
+
 <article class="article">
+
+	{# The header of the article #}
 	<header class="article-header {{ template }}">
 		<div class="article-header-image">
 			<img src="/media/{{ featured_image }}" alt="test">
@@ -19,25 +41,67 @@ layout: layouts/base.njk
 			</ul>
 		</div>
 	</header>
+
+	{# The content of the article #}
 	<div class="article-body">
 		{{ content | safe }}
 	</div>
+
+	{# The footer of the article #}
 	<footer class="article-footer">
-		{%- for tag in tags | filterTagList %}
-		{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
-			<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}
-		{%- endfor %}
+
+		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+
+		{# Use the first tag as the author tag, or use the author prop #}
+		{% if tags %}
+			<ul class="article-tags">
+				{%- set tagUrl %}/tags/{{ tags[1] | slugify }}/{% endset %}
+				<li><a href="{{ tagUrl }}">{{ tags[1] }}</a></li>
+			</ul>
+		{% else %}
+			<p>{{ author }}</p>
+		{% endif %}
+
+		{# List all tags, but remove the first one, that we use for the author #}
+		{% if tags %}
+			<ul class="article-tags">
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+					{% if not loop.first %}
+						<li><a href="{{ tagUrl }}">{{ tag }}</a></li>
+					{% endif %}
+				{%- else %}
+					<li>No tags</li>
+				{%- endfor %}
+			</ul>
+		{% endif %}
 	</footer>
 </article>
+
+
 <aside class="related">
-	{%- if collections.posts %}
-	{%- set previousPost = collections.posts | getPreviousCollectionItem %}
-	{%- set nextPost = collections.posts | getNextCollectionItem %}
-	{%- if nextPost or previousPost %}
-	<ul class="links-nextprev">
-		{%- if previousPost %}<li>Previous: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-		{%- if nextPost %}<li>Next: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-	</ul>
-	{%- endif %}
-	{%- endif %}
+
+	<h3 class="related-header">Articulos recomendados</h3>
+	{% set postsCount = collections.posts | length %}
+	{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
+	{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+	{% set postslistCounter = postsCount %}
+	{%- for post in postslist %}
+		<article class="related-article">
+			<a href="{{ post.url }}">
+				{% if post.data.thumbnail_image %}
+					<figure class="article-image">
+						<img class="article-media" src="/media/{{ post.data.thumbnail_image }}"/>
+					</figure>
+				{% endif %}
+				<div class="article-description">
+					<h3 class="article-title">{{ post.data.title }}</h3>
+					<ul class="article-meta">
+						<li class="article-meta-author">{{ post.data.author }}</li>
+						<li class="article-meta-date"><time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time></li>
+					</ul>
+				</div>
+			</a>
+		</article>
+	{%- endfor %}
 </aside>

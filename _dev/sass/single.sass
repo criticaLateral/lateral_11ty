@@ -71,6 +71,9 @@
   &-body
     max-width: $content-width
     margin: auto
+  &-footer
+    max-width: $content-width
+    margin: auto
 
 // Content
 
@@ -183,3 +186,35 @@
       width: 100%
       height: auto
       display: block
+
+.article-footer
+  padding: $space-xxl 0
+  border-bottom: $border-size solid black
+  margin-bottom: $space-l
+
+.related
+  display: block
+  margin: auto
+  width: 80vw
+  max-width: $max-width
+  display: grid
+  grid-template-columns: 1fr 1fr 1fr
+  gap: $space-l
+  margin-bottom: $space-xxl
+  .related-header
+    grid-column: 1 / span 3
+    text-align: center
+    font-size: 2rem
+    font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    text-transform: uppercase
+  .related-article
+    border: $border-size solid black
+    .article-image
+      +reset
+      display: flex
+      img
+        +reset_box
+        display: block
+        object-fit: cover
+        width: 100%
+        height: auto

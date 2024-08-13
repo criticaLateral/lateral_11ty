@@ -7,7 +7,7 @@ tags:
   - Marisol García
   - Entrevistas
 featured_image: image_portrait.jpg
-thumbnail_image: image_portrait.jpg
+thumbnail_image: image_landscape.jpg
 template: portrait left
 permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false

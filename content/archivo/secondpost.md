@@ -7,7 +7,7 @@ tags:
   - Florencio Ceballos
   - Columnas
 featured_image: image_portrait.jpg
-thumbnail_image: image_portrait.jpg
+thumbnail_image: image_landscape.jpg
 template: portrait right
 permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false
