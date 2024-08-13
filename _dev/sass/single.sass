@@ -198,18 +198,23 @@
   width: 80vw
   max-width: $max-width
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr
   gap: $space-l
   margin-bottom: $space-xxl
   .related-header
-    grid-column: 1 / span 3
+    grid-column: 1 / span 4
     text-align: center
     font-size: 2rem
     font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
     text-transform: uppercase
   .related-article
     border: $border-size solid black
-    .article-image
+    a
+      height: 100%
+      text-decoration: none
+      display: flex
+      flex-direction: column
+    .related-image
       +reset
       display: flex
       img
@@ -218,3 +223,42 @@
         object-fit: cover
         width: 100%
         height: auto
+    .related-title
+      +reset
+      display: flex
+      padding: $space-s
+      flex-direction: column
+      justify-content: center
+      flex-grow: 2
+      background: #E0D9CA
+      color: #222
+      font-size: 1.6rem
+      line-height:2rem
+      font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+      font-weight: 200
+      border-top: $border-size solid black
+    .related-meta
+      +reset
+      display: flex
+      border-top: $border-size solid black
+      justify-content: center
+      li
+        +reset
+        display: block
+        padding: $space-xxs $space-s
+        font-family: 'test-tiempos-text-regular', serif
+        font-size: 1rem
+        color: $color-corp-darker
+        flex-grow: 1
+        flex-shrink: 1
+        &:first-of-type
+          border-right: $border-size solid black
+      &-author
+        background: $color-comp-green-01
+        letter-spacing: 0.05rem
+        strong
+          font-family: 'test-tiempos-text-regular', serif
+          font-variant: small-caps
+      &-date
+        background: $color-comp-green-02
+        font-style: italic

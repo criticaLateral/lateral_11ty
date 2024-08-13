@@ -1,6 +1,6 @@
 ---
 layout: layouts/base.njk
-numberOfLatestPostsToShow: 3
+numberOfLatestPostsToShow: 4
 ---
 
 {# MD structure for a post (example):
@@ -54,10 +54,8 @@ isFeatured: boolean
 
 		{# Use the first tag as the author tag, or use the author prop #}
 		{% if tags %}
-			<ul class="article-tags">
 				{%- set tagUrl %}/tags/{{ tags[1] | slugify }}/{% endset %}
-				<li><a href="{{ tagUrl }}">{{ tags[1] }}</a></li>
-			</ul>
+				<p><a href="{{ tagUrl }}">{{ tags[1] }}</a></p>
 		{% else %}
 			<p>{{ author }}</p>
 		{% endif %}
@@ -68,7 +66,7 @@ isFeatured: boolean
 				{%- for tag in tags | filterTagList %}
 				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 					{% if not loop.first %}
-						<li><a href="{{ tagUrl }}">{{ tag }}</a></li>
+						<li><a href="{{ tagUrl }}">#{{ tag }}</a></li>
 					{% endif %}
 				{%- else %}
 					<li>No tags</li>
@@ -78,9 +76,8 @@ isFeatured: boolean
 	</footer>
 </article>
 
-
+{# Related posts #}
 <aside class="related">
-
 	<h3 class="related-header">Articulos recomendados</h3>
 	{% set postsCount = collections.posts | length %}
 	{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
@@ -90,17 +87,15 @@ isFeatured: boolean
 		<article class="related-article">
 			<a href="{{ post.url }}">
 				{% if post.data.thumbnail_image %}
-					<figure class="article-image">
-						<img class="article-media" src="/media/{{ post.data.thumbnail_image }}"/>
+					<figure class="related-image">
+						<img class="related-media" src="/media/{{ post.data.thumbnail_image }}"/>
 					</figure>
 				{% endif %}
-				<div class="article-description">
-					<h3 class="article-title">{{ post.data.title }}</h3>
-					<ul class="article-meta">
-						<li class="article-meta-author">{{ post.data.author }}</li>
-						<li class="article-meta-date"><time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time></li>
-					</ul>
-				</div>
+				<h3 class="related-title">{{ post.data.title }}</h3>
+				<ul class="related-meta">
+					<li class="related-meta-author">{{ post.data.author }}</li>
+					<li class="related-meta-date"><time class="date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate("LLLL yyyy") }}</time></li>
+				</ul>
 			</a>
 		</article>
 	{%- endfor %}
