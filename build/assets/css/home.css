@@ -353,7 +353,7 @@ header.global-menu .menu li a:hover {
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: stretch;
   align-items: stretch;
-  border: 1px solid black;
+  border: 2px/2 solid black;
 }
 .home .articles .article {
   position: relative;
@@ -365,7 +365,7 @@ header.global-menu .menu li a:hover {
   padding: 0;
   border: 0;
   order: 1;
-  border: 1px solid black;
+  border: 2px/2 solid black;
 }
 .home .articles .article a {
   text-decoration: none;
