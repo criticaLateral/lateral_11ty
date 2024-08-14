@@ -81,6 +81,11 @@ $border-size: 2px
   padding: 0
   border: 0
 
+=hide_text
+  display : inline-block
+  overflow : hidden
+  text-indent : -1000em
+
 // Basic styles
 body
   background: red
@@ -94,67 +99,33 @@ body
   display: none
   visibility: hidden
 
-// Layout
-// .global-menu
-//   +reset_box
-//   padding: $space-s $space-l
-//   display: flex
-//   justify-content: space-between
-//   align-items: center
-//   .logo
-
-//     +reset_box
-//     display: block
-//     width: 330px
-//     height: 50px
-//     background-image: url('/media/logo.svg')
-//     background-size: 70%
-//     background-repeat: no-repeat
-//     background-position: center left
-//     a
-//       display: inline-block
-//       overflow: hidden
-//       white-space: nowrap
-//       text-indent: 1000em
-//       width: 100%
-//       height: 100%
-
-//   .navigation 
-//     ul
-//       +reset_box
-//       display: flex
-//       gap: $space-s
-//       li
-//         +reset_box
-//         a
-//           color: $color-corp-darker
-//           font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
-//           font-size: 1.4rem
-//           text-decoration: none
-//           &:hover
-//             border-bottom: 2px solid $color-corp-darker
-//         &.selected
-//           a
-//             border-bottom: 2px solid $color-corp-light
-//             &:hover
-//               border-bottom: 2px solid $color-corp-darker
-.global-footer
-  background: black
-  color: white
-  padding: $space-xxl
-  a
-    color: white
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-
+#scroll
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  transition: transform .5s ease-in-out
+  transform: translate3d(0,0,0)
+  box-shadow: 0 0 150px -50px rgba(0,0,0,.75)
+  backface-visibility: hidden
+  overflow: scroll
+  -webkit-overflow-scrolling: touch
+  &.open
+    cursor: pointer
+    overflow: hidden
+    transform: translate3d(280px, 100px, 0)
+    position: fixed
 
 header.global-menu
+  +reset
   position: fixed
   top: 0
   left: 0
-  width: 200px
-  height: 100px
+  width: 270px
+  height: 90px
   z-index: 1000
   overflow: hidden
   &.open
@@ -162,11 +133,30 @@ header.global-menu
     height: 100vh
   .toggler
     position: absolute
+    top: $space-xs
+    left: $space-l
+  .logo
+    +reset_box
+    +hide_text
+    display: block
+    width: 220px
+    height: 40px
+    background-image: url('/assets/media/gui/logo.svg')
+    background-size: 100% auto
+    background-repeat: no-repeat
+    background-position: left center
+    a
+      display: inline-block
+      overflow: hidden
+      white-space: nowrap
+      text-indent: 1000em
+      width: 100%
+      height: 100%
   .menu
     position: absolute
-    top: 100px
+    top: 80px
     left: -50px
-    width: 280px
+    width: 250px
     list-style: none
     text-align: right
     opacity: 0
@@ -177,9 +167,24 @@ header.global-menu
     li
       margin-bottom: 15px
       a
-        font-size: 2em
-        color: white
+        color: $color-corp-darker
+        font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+        font-size: 1.4rem
+        text-decoration: none
         padding: 10px 30px 10px 10px
         transition: padding .3s ease-in-out
         &:hover
           padding-right: 50px
+
+.global-content
+  margin-top: 90px
+
+.global-footer
+  background: black
+  color: white
+  padding: $space-xxl
+  a
+    color: white
+    text-decoration: none
+    &:hover
+      text-decoration: underline

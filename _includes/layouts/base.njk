@@ -12,15 +12,14 @@
 		<link rel="stylesheet" href="/assets/css/app.css">
 		<script src="/assets/js/menu.js"></script>
 	</head>
-	<body class="global">
+	<body id="body" class="global">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-    <header class="global-menu">
+    <header id="header" class="global-menu">
       <nav  class="navigation">
-      	<a href="#" id="menuToggler" class="toggler"><h1 class="logo">Lateral</h1></a>
+      	<a href="#" id="menuToggler" class="toggler"><h1 class="logo">{{ metadata.title }}</h1></a>
 				<ul id="menuContent" class="menu">
 					<h2 class="visually-hidden">Top level navigation menu</h2>
-						<li><a href="/" class="home-link">{{ metadata.title }}</a></li>
 					{%- for entry in collections.all | eleventyNavigation %}
 						<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 					{%- endfor %}
@@ -28,24 +27,28 @@
       </nav>
     </header>
 
-		<main class="global-content" id="skip">
-			{{ content | safe }}
-		</main>
-		
-    <footer class="global-footer">
+		<section id="scroll">
 
-			{% set morePosts = postsCount - numberOfLatestPostsToShow %}
-			{% if morePosts > 0 %}
-			<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/archive/">the archive</a>.</p>
-			{% endif %}
+			<main class="global-content" id="skip">
+				{{ content | safe }}
+			</main>
+			
+			<footer class="global-footer">
 
-			<h3>Todas las páginas</h3>
-			<ul>
-				{%- for entry in collections.all %}
-				<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-				{%- endfor %}
-			</ul>
-    </footer>
+				{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+				{% if morePosts > 0 %}
+				<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/archive/">the archive</a>.</p>
+				{% endif %}
+
+				<h3>Todas las páginas</h3>
+				<ul>
+					{%- for entry in collections.all %}
+					<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+					{%- endfor %}
+				</ul>
+			</footer>
+
+		</section>
 
 		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
 	</body>
