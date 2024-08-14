@@ -1,0 +1,343 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button, input {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox], [type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+template, [hidden] {
+  display: none;
+}
+
+.col1 {
+  flex-basis: calc(100% / 16 * 1 - 3 * 20px);
+  width: calc(100% / 16 * 1 - 3 * 20px);
+}
+
+.col2 {
+  flex-basis: calc(100% / 16 * 2 - 3 * 20px);
+  width: calc(100% / 16 * 2 - 3 * 20px);
+}
+
+.col3 {
+  flex-basis: calc(100% / 16 * 3 - 3 * 20px);
+  width: calc(100% / 16 * 3 - 3 * 20px);
+}
+
+.col4 {
+  flex-basis: calc(100% / 16 * 4 - 3 * 20px);
+  width: calc(100% / 16 * 4 - 3 * 20px);
+}
+
+.col5 {
+  flex-basis: calc(100% / 16 * 5 - 3 * 20px);
+  width: calc(100% / 16 * 5 - 3 * 20px);
+}
+
+.col6 {
+  flex-basis: calc(100% / 16 * 6 - 3 * 20px);
+  width: calc(100% / 16 * 6 - 3 * 20px);
+}
+
+.col7 {
+  flex-basis: calc(100% / 16 * 7 - 3 * 20px);
+  width: calc(100% / 16 * 7 - 3 * 20px);
+}
+
+.col8 {
+  flex-basis: calc(100% / 16 * 8 - 3 * 20px);
+  width: calc(100% / 16 * 8 - 3 * 20px);
+}
+
+.col9 {
+  flex-basis: calc(100% / 16 * 9 - 3 * 20px);
+  width: calc(100% / 16 * 9 - 3 * 20px);
+}
+
+.col10 {
+  flex-basis: calc(100% / 16 * 10 - 3 * 20px);
+  width: calc(100% / 16 * 10 - 3 * 20px);
+}
+
+.col11 {
+  flex-basis: calc(100% / 16 * 11 - 3 * 20px);
+  width: calc(100% / 16 * 11 - 3 * 20px);
+}
+
+.col12 {
+  flex-basis: calc(100% / 16 * 12 - 3 * 20px);
+  width: calc(100% / 16 * 12 - 3 * 20px);
+}
+
+.col13 {
+  flex-basis: calc(100% / 16 * 13 - 3 * 20px);
+  width: calc(100% / 16 * 13 - 3 * 20px);
+}
+
+.col14 {
+  flex-basis: calc(100% / 16 * 14 - 3 * 20px);
+  width: calc(100% / 16 * 14 - 3 * 20px);
+}
+
+.col15 {
+  flex-basis: calc(100% / 16 * 15 - 3 * 20px);
+  width: calc(100% / 16 * 15 - 3 * 20px);
+}
+
+.col16 {
+  flex-basis: calc(100% / 16 * 16 - 3 * 20px);
+  width: calc(100% / 16 * 16 - 3 * 20px);
+}
+
+@font-face {
+  font-family: "ABCMarist-Book";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/ABCMarist-Book.woff") format("woff");
+}
+@font-face {
+  font-family: "test-tiempos-text-regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/test-tiempos-text-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "bradfordlltrialweb-book";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/BradfordLLTrialWeb-Book.woff2") format("woff2");
+}
+@font-face {
+  font-family: "ABCMarist-BookItalic";
+  font-weight: 400;
+  font-style: italic;
+  src: url("/assets/fonts/ABCMarist-BookItalic.woff") format("woff");
+}
+@font-face {
+  font-family: "ABCMarist-Medium";
+  font-weight: 600;
+  font-style: normal;
+  src: url("/assets/fonts/ABCMarist-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "ABCMarist-SemiBold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/ABCMarist-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Favorit-Light";
+  font-weight: 200;
+  font-style: normal;
+  src: url("/assets/fonts/Favorit-Light.woff ") format("woff");
+}
+body {
+  background: red;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: sans-serif;
+  background: #F7F6F2;
+}
+
+.visually-hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.global-footer {
+  background: black;
+  color: white;
+  padding: 80px;
+}
+.global-footer a {
+  color: white;
+  text-decoration: none;
+}
+.global-footer a:hover {
+  text-decoration: underline;
+}
+
+header.global-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100px;
+  z-index: 1000;
+  overflow: hidden;
+}
+header.global-menu.open {
+  width: 380px;
+  height: 100vh;
+}
+header.global-menu .toggler {
+  position: absolute;
+}
+header.global-menu .menu {
+  position: absolute;
+  top: 100px;
+  left: -50px;
+  width: 280px;
+  list-style: none;
+  text-align: right;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+header.global-menu .menu.open {
+  opacity: 1;
+  left: 0;
+}
+header.global-menu .menu li {
+  margin-bottom: 15px;
+}
+header.global-menu .menu li a {
+  font-size: 2em;
+  color: white;
+  padding: 10px 30px 10px 10px;
+  transition: padding 0.3s ease-in-out;
+}
+header.global-menu .menu li a:hover {
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=general.css.map */

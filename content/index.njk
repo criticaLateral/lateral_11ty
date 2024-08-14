@@ -30,12 +30,12 @@ numberOfLatestPostsToShow: 4
 							<feMorphology operator="dilate" radius="15 0" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="morphology1"></feMorphology>
 						</filter>
 					</defs>
-					<image class="article-media" x="0%" y="0%" preserveAspectRatio="xMidYMid slice" xlink:href="/media/{{ post.data.thumbnail_image }}" id="glitch"></image>
+					<image class="article-media" x="0%" y="0%" preserveAspectRatio="xMidYMid slice" xlink:href="/assets/media/articles-featured/{{ post.data.thumbnail_image }}" id="glitch"></image>
 				</svg>
 			{% else %}
 				{% if post.data.thumbnail_image %}
 					<figure class="article-image">
-						<img class="article-media" src="/media/{{ post.data.thumbnail_image }}"/>
+						<img class="article-media" src="/assets/media/articles-featured/{{ post.data.thumbnail_image }}"/>
 					</figure>
 				{% endif %}
 			{% endif %}

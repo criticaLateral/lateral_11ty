@@ -12,11 +12,14 @@ const pluginImages = require("./eleventy.config.images.js");
 
 /** @param {import('@11ty/eleventy').UserConfig} eleventyConfig */
 module.exports = function(eleventyConfig) {
-	// Copy the contents of the `public` folder to the output folder
-	// For example, `./public/css/` ends up in `_site/css/`
+	
 	eleventyConfig.addPassthroughCopy({
-		"./public/": "/",
-		"./node_modules/prismjs/themes/prism-okaidia.css": "/css/prism-okaidia.css"
+		// sass-CSS in package-lock
+		// content images in images plugin config
+		"./_dev/js": "/assets/js/", // JS files for development
+		"./assets/fonts": "/assets/fonts/", // Fonts 
+		"./assets/media": "/assets/media/", // General images + Featured content
+		"./node_modules/prismjs/themes/prism-okaidia.css": "/assets/css/prism-okaidia.css",
 	});
 
 	// Run Eleventy when these files change:

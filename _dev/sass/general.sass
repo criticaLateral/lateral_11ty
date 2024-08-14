@@ -8,44 +8,44 @@
   font-family: 'ABCMarist-Book'
   font-weight: 400
   font-style: normal
-  src: url('/fonts/ABCMarist-Book.woff') format('woff')
+  src: url('/assets/fonts/ABCMarist-Book.woff') format('woff')
 
 @font-face
   font-family: 'test-tiempos-text-regular'
   font-weight: 400
   font-style: normal
-  src: url('/fonts/test-tiempos-text-regular.woff2') format('woff2')
+  src: url('/assets/fonts/test-tiempos-text-regular.woff2') format('woff2')
 
 @font-face
   font-family: 'bradfordlltrialweb-book'
   font-weight: 400
   font-style: normal
-  src: url('/fonts/BradfordLLTrialWeb-Book.woff2') format('woff2')
+  src: url('/assets/fonts/BradfordLLTrialWeb-Book.woff2') format('woff2')
 
 
 @font-face
   font-family: 'ABCMarist-BookItalic'
   font-weight: 400
   font-style: italic
-  src: url('/fonts/ABCMarist-BookItalic.woff') format('woff')
+  src: url('/assets/fonts/ABCMarist-BookItalic.woff') format('woff')
 
 @font-face
   font-family: 'ABCMarist-Medium'
   font-weight: 600
   font-style: normal
-  src: url('/fonts/ABCMarist-Medium.woff') format('woff')
+  src: url('/assets/fonts/ABCMarist-Medium.woff') format('woff')
 
 @font-face
   font-family: 'ABCMarist-SemiBold'
   font-weight: 700
   font-style: normal
-  src: url('/fonts/ABCMarist-SemiBold.woff') format('woff')
+  src: url('/assets/fonts/ABCMarist-SemiBold.woff') format('woff')
 
 @font-face
   font-family: 'Favorit-Light'
   font-weight: 200
   font-style: normal
-  src: url('/fonts/Favorit-Light.woff ') format('woff')
+  src: url('/assets/fonts/Favorit-Light.woff ') format('woff')
 
 // Dirty Variables
 
@@ -83,7 +83,7 @@ $border-size: 2px
 
 // Basic styles
 body
-  background: $color-background
+  background: red
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-rendering: optimizeLegibility
@@ -95,48 +95,49 @@ body
   visibility: hidden
 
 // Layout
-.global-menu
-  +reset_box
-  padding: $space-s $space-l
-  display: flex
-  justify-content: space-between
-  align-items: center
-  .logo
-    +reset_box
-    display: block
-    width: 330px
-    height: 50px
-    background-image: url('/media/logo.svg')
-    background-size: 70%
-    background-repeat: no-repeat
-    background-position: center left
-    a
-      display: inline-block
-      overflow: hidden
-      white-space: nowrap
-      text-indent: 1000em
-      width: 100%
-      height: 100%
+// .global-menu
+//   +reset_box
+//   padding: $space-s $space-l
+//   display: flex
+//   justify-content: space-between
+//   align-items: center
+//   .logo
 
-  .navigation 
-    ul
-      +reset_box
-      display: flex
-      gap: $space-s
-      li
-        +reset_box
-        a
-          color: $color-corp-darker
-          font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
-          font-size: 1.4rem
-          text-decoration: none
-          &:hover
-            border-bottom: 2px solid $color-corp-darker
-        &.selected
-          a
-            border-bottom: 2px solid $color-corp-light
-            &:hover
-              border-bottom: 2px solid $color-corp-darker
+//     +reset_box
+//     display: block
+//     width: 330px
+//     height: 50px
+//     background-image: url('/media/logo.svg')
+//     background-size: 70%
+//     background-repeat: no-repeat
+//     background-position: center left
+//     a
+//       display: inline-block
+//       overflow: hidden
+//       white-space: nowrap
+//       text-indent: 1000em
+//       width: 100%
+//       height: 100%
+
+//   .navigation 
+//     ul
+//       +reset_box
+//       display: flex
+//       gap: $space-s
+//       li
+//         +reset_box
+//         a
+//           color: $color-corp-darker
+//           font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+//           font-size: 1.4rem
+//           text-decoration: none
+//           &:hover
+//             border-bottom: 2px solid $color-corp-darker
+//         &.selected
+//           a
+//             border-bottom: 2px solid $color-corp-light
+//             &:hover
+//               border-bottom: 2px solid $color-corp-darker
 .global-footer
   background: black
   color: white
@@ -146,3 +147,39 @@ body
     text-decoration: none
     &:hover
       text-decoration: underline
+
+
+header.global-menu
+  position: fixed
+  top: 0
+  left: 0
+  width: 200px
+  height: 100px
+  z-index: 1000
+  overflow: hidden
+  &.open
+    width: 380px
+    height: 100vh
+  .toggler
+    position: absolute
+  .menu
+    position: absolute
+    top: 100px
+    left: -50px
+    width: 280px
+    list-style: none
+    text-align: right
+    opacity: 0
+    transition: all .3s ease-in-out
+    &.open
+      opacity: 1
+      left: 0
+    li
+      margin-bottom: 15px
+      a
+        font-size: 2em
+        color: white
+        padding: 10px 30px 10px 10px
+        transition: padding .3s ease-in-out
+        &:hover
+          padding-right: 50px

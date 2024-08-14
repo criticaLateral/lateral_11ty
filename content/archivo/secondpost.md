@@ -10,7 +10,7 @@ extraCredits: 'Fotografias por Pablo Noel'
 featured_image: 02_featured.jpg
 thumbnail_image: 02_thumb.jpg
 template: portrait right
-permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
+permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false
 ---
 El proceso constituyente que se avecina tiene por objeto comenzar a reparar la fractura en el pacto social que dejó expuesta la revuelta de octubre. La operación es abrumadora y un contexto de pandemia, crisis económica, agitación social, violencia callejera, brutalidad policial y deslegitimación transversal de la clase dirigente no lo hace más fácil.  

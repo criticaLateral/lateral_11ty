@@ -17,7 +17,7 @@ extraCredits: string
 featured_image: filename.jpg
 thumbnail_image: filename.jpg
 template: landscape bottom  | landscape top | portrait left | portrait right
-permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
+permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: boolean
 ---
 #}
@@ -27,7 +27,7 @@ isFeatured: boolean
 	{# The header of the article #}
 	<header class="article-header {{ template }}">
 		<div class="article-header-image">
-			<img src="/media/{{ featured_image }}" alt="test">
+			<img src="/assets/media/articles-featured/{{ featured_image }}" alt="test">
 		</div>
 		<div class="article-header-content">
 			<div class="article-title">
@@ -92,7 +92,7 @@ isFeatured: boolean
 			<a href="{{ post.url }}">
 				{% if post.data.thumbnail_image %}
 					<figure class="related-image">
-						<img class="related-media" src="/media/{{ post.data.thumbnail_image }}"/>
+						<img class="related-media" src="/assets/media/articles-featured/{{ post.data.thumbnail_image }}"/>
 					</figure>
 				{% endif %}
 				<h3 class="related-title">{{ post.data.title }}</h3>
