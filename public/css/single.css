@@ -634,6 +634,50 @@ body {
   padding: 80px 0;
   border-bottom: 2px solid black;
   margin-bottom: 40px;
+  background-image: url("/media/colofon.svg");
+  background-repeat: no-repeat;
+  background-position: center 30px;
+  background-size: 30px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  font-family: "Favorit-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+.article-footer time {
+  grid-column: 1/span 2;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.article-footer a {
+  text-decoration: none;
+  color: #222;
+}
+.article-footer a:hover {
+  text-decoration: underline;
+}
+.article-footer p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 1.2rem;
+}
+.article-footer ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-align: right;
+  font-size: 1.2rem;
+}
+.article-footer small {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-transform: none;
+  grid-column: 1/span 2;
+  text-align: center;
+  font-size: 1rem;
 }
 
 .related {

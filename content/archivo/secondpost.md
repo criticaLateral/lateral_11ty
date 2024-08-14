@@ -6,8 +6,9 @@ date: 2018-05-01
 tags:
   - Florencio Ceballos
   - Columnas
-featured_image: image_portrait.jpg
-thumbnail_image: image_landscape.jpg
+extraCredits: 'Fotografias por Pablo Noel'
+featured_image: 02_featured.jpg
+thumbnail_image: 02_thumb.jpg
 template: portrait right
 permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false

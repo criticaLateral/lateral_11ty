@@ -6,8 +6,10 @@ date: 2018-05-01
 tags:
   - Esteban Abarzúa
   - Fútbol
-featured_image: image_landscape.jpg
-thumbnail_image: image_landscape.jpg
+  - Reportajes
+extraCredits: 'Fotografias por Pablo Noel'
+featured_image: 01_featured.jpg
+thumbnail_image: 01_thumb.jpg
 template: landscape bottom
 permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: true

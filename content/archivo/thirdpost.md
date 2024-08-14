@@ -6,9 +6,10 @@ date: 2018-05-01
 tags:
   - Marisol García
   - Entrevistas
-featured_image: image_portrait.jpg
-thumbnail_image: image_landscape.jpg
-template: portrait left
+extraCredits: 'Fotografias por Pablo Noel'
+featured_image: 03_featured.jpg
+thumbnail_image: 03_thumb.jpg
+template: landscape bottom
 permalink: 'archive/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false
 ---

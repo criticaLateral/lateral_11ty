@@ -35,7 +35,8 @@ module.exports = function(eleventyConfig) {
 		let metadata = await eleventyImage(input, {
 			widths: widths || ["auto"],
 			formats,
-			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+			outputDir: path.join(eleventyConfig.dir.output, "media/images"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.,
+			urlPath: "/media/images/"
 		});
 
 		// TODO loading=eager and fetchpriority=high
@@ -43,7 +44,7 @@ module.exports = function(eleventyConfig) {
 			alt,
 			sizes,
 			loading: "lazy",
-			decoding: "async",
+			decoding: "async"
 		};
 
 		return eleventyImage.generateHTML(metadata, imageAttributes);

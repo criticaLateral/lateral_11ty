@@ -13,6 +13,7 @@ tags:
   - Author
   - Tag 1
 	- Tag 2
+extraCredits: string
 featured_image: filename.jpg
 thumbnail_image: filename.jpg
 template: landscape bottom  | landscape top | portrait left | portrait right
@@ -50,7 +51,7 @@ isFeatured: boolean
 	{# The footer of the article #}
 	<footer class="article-footer">
 
-		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+		<time datetime="{{ page.date | htmlDateString }}">{{ page.date | footerDate }}</time>
 
 		{# Use the first tag as the author tag, or use the author prop #}
 		{% if tags %}
@@ -72,6 +73,9 @@ isFeatured: boolean
 					<li>No tags</li>
 				{%- endfor %}
 			</ul>
+		{% endif %}
+		{% if extraCredits %}
+			<small>{{ extraCredits }}</small>
 		{% endif %}
 	</footer>
 </article>

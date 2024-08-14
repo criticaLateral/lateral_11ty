@@ -191,6 +191,41 @@
   padding: $space-xxl 0
   border-bottom: $border-size solid black
   margin-bottom: $space-l
+  background-image: url('/media/colofon.svg')
+  background-repeat: no-repeat
+  background-position: center $space-m
+  background-size: 30px auto
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: $space-xl
+  font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  text-transform: uppercase
+  time
+    grid-column: 1 / span 2
+    text-align: center
+    font-size: 1.3rem
+  a
+    text-decoration: none
+    color: #222
+    &:hover
+      text-decoration: underline
+  p
+    +reset
+    font-size: 1.2rem
+  ul
+    +reset
+    list-style: none
+    text-align: right
+    li
+    font-size: 1.2rem
+  small
+    background: black
+    color: white
+    padding: $space-xs
+    text-transform: none
+    grid-column: 1 / span 2
+    text-align: center
+    font-size: 1rem
 
 .related
   display: block
