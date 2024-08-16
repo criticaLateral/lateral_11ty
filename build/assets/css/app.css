@@ -498,24 +498,24 @@ template, [hidden] {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
   @font-face;
   font-family: "BradfordLL-Bold";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Bold.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-BoldItalic";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-BoldItalic.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-BoldItalic.woff2") format("woff2");
 }
 body {
   background: red;
@@ -918,24 +918,24 @@ template, [hidden] {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
   @font-face;
   font-family: "BradfordLL-Bold";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Bold.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-BoldItalic";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-BoldItalic.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-BoldItalic.woff2") format("woff2");
 }
 body {
   background: red;
@@ -1160,7 +1160,7 @@ header.global-menu .menu li a:hover {
   gap: 30px;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-weight: 200;
   border-bottom: 2px solid black;
 }
@@ -1178,7 +1178,7 @@ header.global-menu .menu li a:hover {
   display: block;
   flex-basis: 50%;
   padding: 15px 20px;
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   color: #3D3B3B;
 }
@@ -1190,7 +1190,7 @@ header.global-menu .menu li a:hover {
   letter-spacing: 0.05rem;
 }
 .home .articles .article .article-description .article-meta-author strong {
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-variant: small-caps;
 }
 .home .articles .article .article-description .article-meta-date {
@@ -1508,24 +1508,24 @@ template, [hidden] {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-Book";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
   @font-face;
   font-family: "BradfordLL-Bold";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Bold.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "BradfordLL-BoldItalic";
   font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/BradfordLL-BoldItalic.woff") format("woff");
+  src: url("/assets/fonts/BradfordLL-BoldItalic.woff2") format("woff2");
 }
 body {
   background: red;
@@ -1805,7 +1805,7 @@ header.global-menu .menu li a:hover {
   border: 0;
   font-size: 2rem;
   line-height: 3rem;
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-weight: 200;
 }
 
@@ -1823,7 +1823,7 @@ header.global-menu .menu li a:hover {
   display: block;
   flex-basis: 50%;
   padding: 20px 50px;
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-size: 1.3rem;
   color: #3D3B3B;
 }
@@ -1835,7 +1835,7 @@ header.global-menu .menu li a:hover {
   letter-spacing: 0.05rem;
 }
 .article-meta-author strong {
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-variant: small-caps;
 }
 .article-meta-date {
@@ -1844,7 +1844,7 @@ header.global-menu .menu li a:hover {
 }
 
 .article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   margin-bottom: 50px;
 }
 .article-body h1 {
@@ -1872,7 +1872,7 @@ header.global-menu .menu li a:hover {
   line-height: 2.8rem;
 }
 .article-body p {
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-size: 1.6rem;
   line-height: 2.8rem;
   margin-bottom: 50px;
@@ -2042,7 +2042,7 @@ header.global-menu .menu li a:hover {
   border: 0;
   display: block;
   padding: 10px 20px;
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   color: #3D3B3B;
   flex-grow: 1;
@@ -2056,7 +2056,7 @@ header.global-menu .menu li a:hover {
   letter-spacing: 0.05rem;
 }
 .related .related-article .related-meta-author strong {
-  font-family: "BradfordLL-Book", Georgia, Serif;
+  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-variant: small-caps;
 }
 .related .related-article .related-meta-date {
