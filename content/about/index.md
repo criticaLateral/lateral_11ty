@@ -6,4 +6,4 @@ eleventyNavigation:
 ---
 # Info
 
-Somos Lateral.
+Somos Lateral, fundado en 2024.
