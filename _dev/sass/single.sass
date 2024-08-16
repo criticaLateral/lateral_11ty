@@ -88,7 +88,7 @@
   h1
     +reset
     font-size: 5rem
-    font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-family: $fontTitleLight
     font-weight: 200
     line-height: 5rem
 .article-subtitle
@@ -104,7 +104,7 @@
     +reset
     font-size: 2rem
     line-height: 3rem
-    font-family: 'test-tiempos-text-regular', serif
+    font-family: $fontTextBook
     font-weight: 200
 .article-meta
   +reset
@@ -115,7 +115,7 @@
     display: block
     flex-basis: 50%
     padding: $space-s $space-xl
-    font-family: 'test-tiempos-text-regular', serif
+    font-family: $fontTextBook
     font-size: 1.3rem
     color: $color-corp-darker
     &:first-of-type
@@ -124,7 +124,7 @@
     background: $color-comp-green-01
     letter-spacing: 0.05rem
     strong
-      font-family: 'test-tiempos-text-regular', serif
+      font-family: $fontTextBook
       font-variant: small-caps
   &-date
     background: $color-comp-green-02
@@ -133,7 +133,7 @@
 
 .article-body 
   h1, h2, h3, h4, h5, h6
-    font-family: 'test-tiempos-text-regular', serif
+    font-family: $fontTextBook
     margin-bottom: $space-xl
   h1
     font-size: 3rem
@@ -154,8 +154,7 @@
     font-size: 1.8rem
     line-height: 2.8rem
   p
-    font-family: 'test-tiempos-text-regular', serif
-    font-family: 'test-tiempos-text-regular', serif
+    font-family: $fontTextBook
     font-size: 1.6rem
     line-height: 2.8rem
     margin-bottom: $space-xl
@@ -198,7 +197,7 @@
   display: grid
   grid-template-columns: 1fr 1fr
   gap: $space-xl
-  font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-family: $fontTitleLight
   text-transform: uppercase
   time
     grid-column: 1 / span 2
@@ -240,7 +239,7 @@
     grid-column: 1 / span 4
     text-align: center
     font-size: 2rem
-    font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-family: $fontTitleLight
     text-transform: uppercase
   .related-article
     border: $border-size solid black
@@ -269,7 +268,7 @@
       color: #222
       font-size: 1.6rem
       line-height:2rem
-      font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+      font-family: $fontTitleLight
       font-weight: 200
       border-top: $border-size solid black
     .related-meta
@@ -281,7 +280,7 @@
         +reset
         display: block
         padding: $space-xxs $space-s
-        font-family: 'test-tiempos-text-regular', serif
+        font-family: $fontTextBook
         font-size: 1rem
         color: $color-corp-darker
         flex-grow: 1
@@ -292,7 +291,7 @@
         background: $color-comp-green-01
         letter-spacing: 0.05rem
         strong
-          font-family: 'test-tiempos-text-regular', serif
+          font-family: $fontTextBook
           font-variant: small-caps
       &-date
         background: $color-comp-green-02

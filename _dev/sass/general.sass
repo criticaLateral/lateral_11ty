@@ -3,7 +3,15 @@
 @import spacing
 
 // Dirty Fonts
-  
+
+@font-face
+  font-family: 'Favorit-Light'
+  font-weight: 200
+  font-style: normal
+  src: url('/assets/fonts/Favorit-Light.woff ') format('woff')
+
+// Text Fonts ABC MArist
+
 @font-face
   font-family: 'ABCMarist-Book'
   font-weight: 400
@@ -15,13 +23,6 @@
   font-weight: 400
   font-style: normal
   src: url('/assets/fonts/test-tiempos-text-regular.woff2') format('woff2')
-
-@font-face
-  font-family: 'bradfordlltrialweb-book'
-  font-weight: 400
-  font-style: normal
-  src: url('/assets/fonts/BradfordLLTrialWeb-Book.woff2') format('woff2')
-
 
 @font-face
   font-family: 'ABCMarist-BookItalic'
@@ -41,12 +42,39 @@
   font-style: normal
   src: url('/assets/fonts/ABCMarist-SemiBold.woff') format('woff')
 
-@font-face
-  font-family: 'Favorit-Light'
-  font-weight: 200
-  font-style: normal
-  src: url('/assets/fonts/Favorit-Light.woff ') format('woff')
 
+// Text Font Bradford hacked
+
+@font-face
+  font-family: 'BradfordLL-Book'
+  font-weight: 700
+  font-style: normal
+  src: url('/assets/fonts/BradfordLL-Book.woff') format('woff')
+
+@font-face
+  font-family: 'BradfordLL-Book'
+  font-weight: 700
+  font-style: normal
+  src: url('/assets/fonts/BradfordLL-Book.woff') format('woff')
+
+  @font-face
+  font-family: 'BradfordLL-Bold'
+  font-weight: 700
+  font-style: normal
+  src: url('/assets/fonts/BradfordLL-Bold.woff') format('woff')
+
+@font-face
+  font-family: 'BradfordLL-BoldItalic'
+  font-weight: 700
+  font-style: normal
+  src: url('/assets/fonts/BradfordLL-BoldItalic.woff') format('woff')
+
+// Font Variables
+
+$fontTitleLight: 'Favorit-Light', Helveica, Arial, sans-serif
+$fontTextBook: 'BradfordLL-Book', Georgia, Serif
+$fontTextBold: 'BradfordLL-Bold', Georgia, Serif
+  
 // Dirty Variables
 
 $content-width: 800px
@@ -168,7 +196,7 @@ header.global-menu
       margin-bottom: 15px
       a
         color: $color-corp-darker
-        font-family: 'Favorit-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif
+        font-family: $fontTitleLight
         font-size: 1.4rem
         text-decoration: none
         padding: 10px 30px 10px 10px

@@ -229,6 +229,12 @@ template, [hidden] {
 }
 
 @font-face {
+  font-family: "Favorit-Light";
+  font-weight: 200;
+  font-style: normal;
+  src: url("/assets/fonts/Favorit-Light.woff ") format("woff");
+}
+@font-face {
   font-family: "ABCMarist-Book";
   font-weight: 400;
   font-style: normal;
@@ -239,12 +245,6 @@ template, [hidden] {
   font-weight: 400;
   font-style: normal;
   src: url("/assets/fonts/test-tiempos-text-regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "bradfordlltrialweb-book";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/assets/fonts/BradfordLLTrialWeb-Book.woff2") format("woff2");
 }
 @font-face {
   font-family: "ABCMarist-BookItalic";
@@ -265,10 +265,27 @@ template, [hidden] {
   src: url("/assets/fonts/ABCMarist-SemiBold.woff") format("woff");
 }
 @font-face {
-  font-family: "Favorit-Light";
-  font-weight: 200;
+  font-family: "BradfordLL-Book";
+  font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Favorit-Light.woff ") format("woff");
+  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+}
+@font-face {
+  font-family: "BradfordLL-Book";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/BradfordLL-Book.woff") format("woff");
+  @font-face;
+  font-family: "BradfordLL-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/BradfordLL-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "BradfordLL-BoldItalic";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/BradfordLL-BoldItalic.woff") format("woff");
 }
 body {
   background: red;
@@ -374,7 +391,7 @@ header.global-menu .menu li {
 }
 header.global-menu .menu li a {
   color: #3D3B3B;
-  font-family: "Favorit-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Favorit-Light", Helveica, Arial, sans-serif;
   font-size: 1.4rem;
   text-decoration: none;
   padding: 10px 30px 10px 10px;
@@ -475,7 +492,7 @@ header.global-menu .menu li a:hover {
   color: #222;
   font-size: 2.2rem;
   line-height: 2.4rem;
-  font-family: "Favorit-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Favorit-Light", Helveica, Arial, sans-serif;
   font-weight: 200;
   border-bottom: 2px solid black;
 }
@@ -493,7 +510,7 @@ header.global-menu .menu li a:hover {
   gap: 30px;
   font-size: 1.2rem;
   line-height: 1.6rem;
-  font-family: "test-tiempos-text-regular", serif;
+  font-family: "BradfordLL-Book", Georgia, Serif;
   font-weight: 200;
   border-bottom: 2px solid black;
 }
@@ -511,7 +528,7 @@ header.global-menu .menu li a:hover {
   display: block;
   flex-basis: 50%;
   padding: 15px 20px;
-  font-family: "test-tiempos-text-regular", serif;
+  font-family: "BradfordLL-Book", Georgia, Serif;
   font-size: 1rem;
   color: #3D3B3B;
 }
@@ -523,7 +540,7 @@ header.global-menu .menu li a:hover {
   letter-spacing: 0.05rem;
 }
 .home .articles .article .article-description .article-meta-author strong {
-  font-family: "test-tiempos-text-regular", serif;
+  font-family: "BradfordLL-Book", Georgia, Serif;
   font-variant: small-caps;
 }
 .home .articles .article .article-description .article-meta-date {
