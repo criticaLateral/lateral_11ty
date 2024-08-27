@@ -1,3 +1,98 @@
-
+.article-header.green .article-title, .article-description.green .article-title {
+  background-color: #C8FF00;
+}
+.article-header.green .article-subtitle, .article-description.green .article-subtitle {
+  background-color: #E9FF99;
+}
+.article-header.green .article-meta-author, .article-description.green .article-meta-author {
+  background-color: #DEFF66;
+}
+.article-header.green .article-meta-date, .article-description.green .article-meta-date {
+  background-color: #EEFFB2;
+}
+.article-header.yellow .article-title, .article-description.yellow .article-title {
+  background-color: #ffdc00;
+}
+.article-header.yellow .article-subtitle, .article-description.yellow .article-subtitle {
+  background-color: #fff199;
+}
+.article-header.yellow .article-meta-author, .article-description.yellow .article-meta-author {
+  background-color: #ffea66;
+}
+.article-header.yellow .article-meta-date, .article-description.yellow .article-meta-date {
+  background-color: #eeffb2;
+}
+.article-header.orange .article-title, .article-description.orange .article-title {
+  background-color: #ffa700;
+}
+.article-header.orange .article-subtitle, .article-description.orange .article-subtitle {
+  background-color: #ffdc99;
+}
+.article-header.orange .article-meta-author, .article-description.orange .article-meta-author {
+  background-color: #ffca66;
+}
+.article-header.orange .article-meta-date, .article-description.orange .article-meta-date {
+  background-color: #ffe5b2;
+}
+.article-header.cyan .article-title, .article-description.cyan .article-title {
+  background-color: #1affd3;
+}
+.article-header.cyan .article-subtitle, .article-description.cyan .article-subtitle {
+  background-color: #bafff2;
+}
+.article-header.cyan .article-meta-author, .article-description.cyan .article-meta-author {
+  background-color: #a3ffed;
+}
+.article-header.cyan .article-meta-date, .article-description.cyan .article-meta-date {
+  background-color: #d1fff6;
+}
+.article-header.fucsia .article-title, .article-description.fucsia .article-title {
+  background-color: #ff266c;
+}
+.article-header.fucsia .article-subtitle, .article-description.fucsia .article-subtitle {
+  background-color: #ffbed3;
+}
+.article-header.fucsia .article-meta-author, .article-description.fucsia .article-meta-author {
+  background-color: #ffa8c4;
+}
+.article-header.fucsia .article-meta-date, .article-description.fucsia .article-meta-date {
+  background-color: #ffd4e2;
+}
+.article-header.purple .article-title, .article-description.purple .article-title {
+  background-color: #be79ff;
+}
+.article-header.purple .article-subtitle, .article-description.purple .article-subtitle {
+  background-color: #dfbcff;
+}
+.article-header.purple .article-meta-author, .article-description.purple .article-meta-author {
+  background-color: #d8afff;
+}
+.article-header.purple .article-meta-date, .article-description.purple .article-meta-date {
+  background-color: #ebd7ff;
+}
+.article-header.blue .article-title, .article-description.blue .article-title {
+  background-color: #96d2ff;
+}
+.article-header.blue .article-subtitle, .article-description.blue .article-subtitle {
+  background-color: #d5edff;
+}
+.article-header.blue .article-meta-author, .article-description.blue .article-meta-author {
+  background-color: #c0e4ff;
+}
+.article-header.blue .article-meta-date, .article-description.blue .article-meta-date {
+  background-color: #dff1ff;
+}
+.article-header.pink .article-title, .article-description.pink .article-title {
+  background-color: #ff64ff;
+}
+.article-header.pink .article-subtitle, .article-description.pink .article-subtitle {
+  background-color: #ffc1ff;
+}
+.article-header.pink .article-meta-author, .article-description.pink .article-meta-author {
+  background-color: #ffa2ff;
+}
+.article-header.pink .article-meta-date, .article-description.pink .article-meta-date {
+  background-color: #ffd0ff;
+}
 
 /*# sourceMappingURL=colors.css.map */

@@ -39,7 +39,7 @@ numberOfLatestPostsToShow: 4
 					</figure>
 				{% endif %}
 			{% endif %}
-			<div class="article-description">
+			<div class="article-description {{ post.data.color }}">
 				<h3 class="article-title">{{ post.data.title }}</h3>
 				{% if post.data.description %}
 					<p class="article-subtitle">{{ post.data.description }}</p>

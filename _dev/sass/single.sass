@@ -6,7 +6,6 @@
   max-width: $max-width
   &-header
     width: 100%
-    color: white
     margin-bottom: $space-xxl
     border: $border-size solid black
     display: grid
@@ -111,8 +110,6 @@
   padding: $space-m $space-xl
   flex-direction: column
   justify-content: center
-  background: #E0D9CA
-  color: #222
   @media only screen and (max-width : #{$breakpoint-l})
     padding: $space-xs $space-s
   h1
@@ -124,8 +121,6 @@
   display: flex
   flex-direction: column
   justify-content: center
-  background: #E2E9E1
-  color: #222222
   @media only screen and (max-width : #{$breakpoint-l})
     padding: $space-xs $space-s
   p
@@ -142,7 +137,6 @@
     flex-basis: 50%
     padding: $space-s $space-xl
     font-family: $fontTextBook
-    color: $color-corp-darker
     @media only screen and (max-width : #{$breakpoint-s})
       padding: $space-xs $space-s
     &:first-of-type
@@ -151,15 +145,12 @@
         border-right: 0
         border-bottom: $border-size solid black
   &-author
-    background: $color-comp-green-01
     +font_meta
     strong
       font-variant: small-caps
   &-date
-    background: $color-comp-green-02
     +font_meta
     font-style: italic
-
 
 .article-body 
   h1, h2, h3, h4, h5, h6
@@ -339,8 +330,6 @@
       flex-direction: column
       justify-content: center
       flex-grow: 2
-      background: #E0D9CA
-      color: #222
       font-size: 1.6rem
       line-height:2rem
       font-family: $fontTitleLight
@@ -357,17 +346,14 @@
         padding: $space-xxs $space-s
         font-family: $fontTextBook
         font-size: 1rem
-        color: $color-corp-darker
         flex-grow: 1
         flex-shrink: 1
         &:first-of-type
           border-right: $border-size solid black
       &-author
-        background: $color-comp-green-01
         letter-spacing: 0.05rem
         strong
           font-family: $fontTextBook
           font-variant: small-caps
       &-date
-        background: $color-comp-green-02
         font-style: italic

@@ -17,6 +17,7 @@ extraCredits: string
 featured_image: filename.jpg
 thumbnail_image: filename.jpg
 template: landscape bottom  | landscape top | portrait left | portrait right
+color: green | yellow | orange | cyan | fucsia | purple | blue | pink
 permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: boolean
 ---
@@ -25,7 +26,7 @@ isFeatured: boolean
 <article class="article">
 
 	{# The header of the article #}
-	<header class="article-header {{ template }}">
+	<header class="article-header {{ template }} {{color}}">
 		<div class="article-header-image">
 			<img src="/assets/media/articles-featured/{{ featured_image }}" alt="test">
 		</div>
