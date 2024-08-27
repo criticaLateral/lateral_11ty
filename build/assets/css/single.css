@@ -148,86 +148,6 @@ template, [hidden] {
   display: none;
 }
 
-.col1 {
-  flex-basis: calc(100% / 16 * 1 - 3 * 20px);
-  width: calc(100% / 16 * 1 - 3 * 20px);
-}
-
-.col2 {
-  flex-basis: calc(100% / 16 * 2 - 3 * 20px);
-  width: calc(100% / 16 * 2 - 3 * 20px);
-}
-
-.col3 {
-  flex-basis: calc(100% / 16 * 3 - 3 * 20px);
-  width: calc(100% / 16 * 3 - 3 * 20px);
-}
-
-.col4 {
-  flex-basis: calc(100% / 16 * 4 - 3 * 20px);
-  width: calc(100% / 16 * 4 - 3 * 20px);
-}
-
-.col5 {
-  flex-basis: calc(100% / 16 * 5 - 3 * 20px);
-  width: calc(100% / 16 * 5 - 3 * 20px);
-}
-
-.col6 {
-  flex-basis: calc(100% / 16 * 6 - 3 * 20px);
-  width: calc(100% / 16 * 6 - 3 * 20px);
-}
-
-.col7 {
-  flex-basis: calc(100% / 16 * 7 - 3 * 20px);
-  width: calc(100% / 16 * 7 - 3 * 20px);
-}
-
-.col8 {
-  flex-basis: calc(100% / 16 * 8 - 3 * 20px);
-  width: calc(100% / 16 * 8 - 3 * 20px);
-}
-
-.col9 {
-  flex-basis: calc(100% / 16 * 9 - 3 * 20px);
-  width: calc(100% / 16 * 9 - 3 * 20px);
-}
-
-.col10 {
-  flex-basis: calc(100% / 16 * 10 - 3 * 20px);
-  width: calc(100% / 16 * 10 - 3 * 20px);
-}
-
-.col11 {
-  flex-basis: calc(100% / 16 * 11 - 3 * 20px);
-  width: calc(100% / 16 * 11 - 3 * 20px);
-}
-
-.col12 {
-  flex-basis: calc(100% / 16 * 12 - 3 * 20px);
-  width: calc(100% / 16 * 12 - 3 * 20px);
-}
-
-.col13 {
-  flex-basis: calc(100% / 16 * 13 - 3 * 20px);
-  width: calc(100% / 16 * 13 - 3 * 20px);
-}
-
-.col14 {
-  flex-basis: calc(100% / 16 * 14 - 3 * 20px);
-  width: calc(100% / 16 * 14 - 3 * 20px);
-}
-
-.col15 {
-  flex-basis: calc(100% / 16 * 15 - 3 * 20px);
-  width: calc(100% / 16 * 15 - 3 * 20px);
-}
-
-.col16 {
-  flex-basis: calc(100% / 16 * 16 - 3 * 20px);
-  width: calc(100% / 16 * 16 - 3 * 20px);
-}
-
 @font-face {
   font-family: "Favorit-Light";
   font-weight: 200;
@@ -235,57 +155,10 @@ template, [hidden] {
   src: url("/assets/fonts/Favorit-Light.woff ") format("woff");
 }
 @font-face {
-  font-family: "ABCMarist-Book";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/assets/fonts/ABCMarist-Book.woff") format("woff");
-}
-@font-face {
   font-family: "test-tiempos-text-regular";
   font-weight: 400;
   font-style: normal;
   src: url("/assets/fonts/test-tiempos-text-regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "ABCMarist-BookItalic";
-  font-weight: 400;
-  font-style: italic;
-  src: url("/assets/fonts/ABCMarist-BookItalic.woff") format("woff");
-}
-@font-face {
-  font-family: "ABCMarist-Medium";
-  font-weight: 600;
-  font-style: normal;
-  src: url("/assets/fonts/ABCMarist-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "ABCMarist-SemiBold";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/ABCMarist-SemiBold.woff") format("woff");
-}
-@font-face {
-  font-family: "BradfordLL-Book";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
-}
-@font-face {
-  font-family: "BradfordLL-Book";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Book.woff2") format("woff2");
-  @font-face;
-  font-family: "BradfordLL-Bold";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/BradfordLL-Bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "BradfordLL-BoldItalic";
-  font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/BradfordLL-BoldItalic.woff2") format("woff2");
 }
 body {
   background: red;
@@ -293,7 +166,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: sans-serif;
-  background: #F7F6F2;
+  background: #F5F5F5;
 }
 
 .visually-hidden {
@@ -314,6 +187,7 @@ body {
   box-shadow: 0 0 150px -50px rgba(0, 0, 0, 0.75);
   backface-visibility: hidden;
   overflow: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
 }
 #scroll.open {
@@ -321,6 +195,11 @@ body {
   overflow: hidden;
   transform: translate3d(280px, 100px, 0);
   position: fixed;
+}
+@media only screen and (max-width: 767px) {
+  #scroll.open {
+    transform: translate3d(200px, 80px, 0);
+  }
 }
 
 header.global-menu {
@@ -330,19 +209,30 @@ header.global-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 270px;
+  width: 280px;
   height: 90px;
   z-index: 1000;
   overflow: hidden;
 }
 header.global-menu.open {
-  width: 380px;
+  width: 280px;
   height: 100vh;
+}
+@media only screen and (max-width: 767px) {
+  header.global-menu.open {
+    width: 200px;
+  }
 }
 header.global-menu .toggler {
   position: absolute;
   top: 15px;
   left: 40px;
+}
+@media only screen and (max-width: 767px) {
+  header.global-menu .toggler {
+    top: 10px;
+    left: 20px;
+  }
 }
 header.global-menu .logo {
   position: relative;
@@ -364,6 +254,11 @@ header.global-menu .logo {
   background-repeat: no-repeat;
   background-position: left center;
 }
+@media only screen and (max-width: 767px) {
+  header.global-menu .logo {
+    width: 150px;
+  }
+}
 header.global-menu .logo a {
   display: inline-block;
   overflow: hidden;
@@ -373,14 +268,23 @@ header.global-menu .logo a {
   height: 100%;
 }
 header.global-menu .menu {
+  margin: 0;
+  padding: 0;
+  border: 0;
   position: absolute;
-  top: 80px;
+  top: 100px;
   left: -50px;
-  width: 250px;
+  width: 280px;
   list-style: none;
   text-align: right;
   opacity: 0;
   transition: all 0.3s ease-in-out;
+}
+@media only screen and (max-width: 767px) {
+  header.global-menu .menu {
+    width: 200px;
+    top: 80px;
+  }
 }
 header.global-menu .menu.open {
   opacity: 1;
@@ -418,6 +322,13 @@ header.global-menu .menu li a:hover {
   text-decoration: underline;
 }
 
+.single-page {
+  display: block;
+  margin: auto;
+  max-width: 1920px;
+  padding: 40px;
+}
+
 .article {
   display: block;
   margin: auto;
@@ -433,6 +344,11 @@ header.global-menu .menu li a:hover {
 .article-header.portrait {
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 1023px) {
+  .article-header.portrait {
+    grid-template-columns: 1fr;
+  }
+}
 .article-header.portrait .article-header-content {
   height: 100%;
   display: grid;
@@ -441,6 +357,11 @@ header.global-menu .menu li a:hover {
 }
 .article-header.portrait .article-title {
   border-bottom: 2px solid black;
+}
+@media only screen and (max-width: 1023px) {
+  .article-header.portrait .article-title {
+    order: 0;
+  }
 }
 .article-header.portrait .article-subtitle {
   border-bottom: 2px solid black;
@@ -468,13 +389,32 @@ header.global-menu .menu li a:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr max-content;
 }
+@media only screen and (max-width: 1023px) {
+  .article-header.landscape .article-header-content {
+    grid-template-columns: 1fr;
+  }
+}
 .article-header.landscape .article-title {
   border-bottom: 2px solid black;
+}
+@media only screen and (max-width: 1023px) {
+  .article-header.landscape .article-title {
+    order: 0;
+  }
 }
 .article-header.landscape .article-subtitle {
   border-left: 2px solid black;
   grid-column: 2/2;
   grid-row: 1/span 2;
+}
+@media only screen and (max-width: 1023px) {
+  .article-header.landscape .article-subtitle {
+    grid-column: 1/1;
+    grid-row: 2/2;
+    border-bottom: 2px solid black;
+    border-left: 0;
+    order: 1;
+  }
 }
 .article-header.landscape.top .article-header-image {
   order: 0;
@@ -485,6 +425,11 @@ header.global-menu .menu li a:hover {
 }
 .article-header.landscape.bottom .article-header-image {
   order: 1;
+}
+@media only screen and (max-width: 1023px) {
+  .article-header.landscape.bottom .article-header-image {
+    border-bottom: 2px solid black;
+  }
 }
 .article-header.landscape.bottom .article-header-content {
   border-bottom: 2px solid black;
@@ -521,9 +466,39 @@ header.global-menu .menu li a:hover {
   max-width: 800px;
   margin: auto;
 }
+@media only screen and (max-width: 1023px) {
+  .article-body {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .article-body {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-body {
+    padding: 0 30px;
+  }
+}
 .article-footer {
   max-width: 800px;
   margin: auto;
+}
+@media only screen and (max-width: 1023px) {
+  .article-footer {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .article-footer {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-footer {
+    padding: 0 30px;
+  }
 }
 
 .article-title {
@@ -537,14 +512,37 @@ header.global-menu .menu li a:hover {
   background: #E0D9CA;
   color: #222;
 }
+@media only screen and (max-width: 1023px) {
+  .article-title {
+    padding: 15px 20px;
+  }
+}
 .article-title h1 {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 5rem;
   font-family: "Favorit-Light", Helveica, Arial, sans-serif;
+  font-size: 5rem;
+  line-height: 5.2rem;
   font-weight: 200;
-  line-height: 5rem;
+}
+@media only screen and (max-width: 1279px) {
+  .article-title h1 {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .article-title h1 {
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-title h1 {
+    font-size: 2.2rem;
+    line-height: 2.4rem;
+  }
 }
 
 .article-subtitle {
@@ -557,16 +555,35 @@ header.global-menu .menu li a:hover {
   justify-content: center;
   background: #E2E9E1;
   color: #222222;
-  gap: 30px;
+}
+@media only screen and (max-width: 1023px) {
+  .article-subtitle {
+    padding: 15px 20px;
+  }
 }
 .article-subtitle p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 2rem;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
+  font-size: 2.2rem;
   line-height: 3rem;
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-weight: 200;
+}
+@media only screen and (max-width: 1279px) {
+  .article-subtitle p {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+@media only screen and (max-width: 1023px) {
+  .article-subtitle p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-subtitle p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
 }
 
 .article-meta {
@@ -576,6 +593,11 @@ header.global-menu .menu li a:hover {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 767px) {
+  .article-meta {
+    flex-direction: column;
+  }
+}
 .article-meta li {
   margin: 0;
   padding: 0;
@@ -583,28 +605,52 @@ header.global-menu .menu li a:hover {
   display: block;
   flex-basis: 50%;
   padding: 20px 50px;
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
-  font-size: 1.3rem;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
   color: #3D3B3B;
+}
+@media only screen and (max-width: 767px) {
+  .article-meta li {
+    padding: 15px 20px;
+  }
 }
 .article-meta li:first-of-type {
   border-right: 2px solid black;
 }
+@media only screen and (max-width: 767px) {
+  .article-meta li:first-of-type {
+    border-right: 0;
+    border-bottom: 2px solid black;
+  }
+}
 .article-meta-author {
   background: #F1FFBA;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
   letter-spacing: 0.05rem;
 }
+@media only screen and (max-width: 767px) {
+  .article-meta-author {
+    font-size: 1rem;
+  }
+}
 .article-meta-author strong {
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
   font-variant: small-caps;
 }
 .article-meta-date {
   background: #FAFFE7;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
   font-style: italic;
+}
+@media only screen and (max-width: 767px) {
+  .article-meta-date {
+    font-size: 1rem;
+  }
 }
 
 .article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
   margin-bottom: 50px;
 }
 .article-body h1 {
@@ -632,10 +678,28 @@ header.global-menu .menu li a:hover {
   line-height: 2.8rem;
 }
 .article-body p {
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
   font-size: 1.6rem;
   line-height: 2.8rem;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 1279px) {
+  .article-body p {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .article-body p {
+    font-size: 1.3rem;
+    line-height: 2.2rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-body p {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
 }
 .article-body .header-anchor {
   text-decoration: none;
@@ -655,9 +719,34 @@ header.global-menu .menu li a:hover {
   transform: translateX(-100px);
   padding-right: 50px;
 }
+@media only screen and (max-width: 959px) {
+  .article-body blockquote {
+    margin: 50px 0;
+    transform: translateX(0);
+    padding-right: 20px;
+  }
+}
 .article-body blockquote p {
   font-size: 2.5rem;
   line-height: 3.4rem;
+}
+@media only screen and (max-width: 1279px) {
+  .article-body blockquote p {
+    font-size: 2rem;
+    line-height: 3.2rem;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .article-body blockquote p {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-body blockquote p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
 }
 .article-body p picture {
   margin: 0;
@@ -687,10 +776,31 @@ header.global-menu .menu li a:hover {
   font-family: "Favorit-Light", Helveica, Arial, sans-serif;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 1023px) {
+  .article-footer {
+    padding: 80px 50px;
+  }
+}
+@media only screen and (max-width: 959px) {
+  .article-footer {
+    padding: 80px 40px;
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .article-footer {
+    padding: 80px 30px;
+  }
+}
 .article-footer time {
   grid-column: 1/span 2;
   text-align: center;
   font-size: 1.3rem;
+}
+@media only screen and (max-width: 959px) {
+  .article-footer time {
+    grid-column: 1;
+  }
 }
 .article-footer a {
   text-decoration: none;
@@ -705,12 +815,22 @@ header.global-menu .menu li a:hover {
   border: 0;
   font-size: 1.2rem;
 }
+@media only screen and (max-width: 959px) {
+  .article-footer p {
+    text-align: center;
+  }
+}
 .article-footer ul {
   margin: 0;
   padding: 0;
   border: 0;
   list-style: none;
   text-align: right;
+}
+@media only screen and (max-width: 959px) {
+  .article-footer ul {
+    text-align: center;
+  }
 }
 .article-footer ul li {
   font-size: 1.2rem;
@@ -724,6 +844,11 @@ header.global-menu .menu li a:hover {
   text-align: center;
   font-size: 1rem;
 }
+@media only screen and (max-width: 959px) {
+  .article-footer small {
+    grid-column: 1;
+  }
+}
 
 .related {
   display: block;
@@ -735,12 +860,32 @@ header.global-menu .menu li a:hover {
   gap: 40px;
   margin-bottom: 80px;
 }
+@media only screen and (max-width: 1279px) {
+  .related {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .related {
+    grid-template-columns: 1fr;
+  }
+}
 .related .related-header {
   grid-column: 1/span 4;
   text-align: center;
   font-size: 2rem;
   font-family: "Favorit-Light", Helveica, Arial, sans-serif;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1279px) {
+  .related .related-header {
+    grid-column: 1/span 2;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .related .related-header {
+    grid-column: 1;
+  }
 }
 .related .related-article {
   border: 2px solid black;
@@ -802,7 +947,7 @@ header.global-menu .menu li a:hover {
   border: 0;
   display: block;
   padding: 10px 20px;
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   color: #3D3B3B;
   flex-grow: 1;
@@ -816,7 +961,7 @@ header.global-menu .menu li a:hover {
   letter-spacing: 0.05rem;
 }
 .related .related-article .related-meta-author strong {
-  font-family: "BradfordLL-Book", Georgia, "Times New Roman", Times, serif;
+  font-family: "test-tiempos-text-regular", Georgia, "Times New Roman", Times, serif;
   font-variant: small-caps;
 }
 .related .related-article .related-meta-date {

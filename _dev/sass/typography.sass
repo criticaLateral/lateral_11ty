@@ -1,0 +1,115 @@
+@import breakpoints
+
+// Dirty Fonts
+
+@font-face
+  font-family: 'Favorit-Light'
+  font-weight: 200
+  font-style: normal
+  src: url('/assets/fonts/Favorit-Light.woff ') format('woff')
+
+@font-face
+  font-family: 'test-tiempos-text-regular'
+  font-weight: 400
+  font-style: normal
+  src: url('/assets/fonts/test-tiempos-text-regular.woff2') format('woff2')
+
+// Font Variables
+$fontTitleLight: 'Favorit-Light', Helveica, Arial, sans-serif
+$fontTextBook:  'test-tiempos-text-regular', Georgia, 'Times New Roman', Times, serif
+$fontTextBold: 'test-tiempos-text-regular', Georgia, 'Times New Roman', Times, serif
+
+
+//---   
+// Font sizes
+// --- 
+
+
+// Titles
+=title_xl
+  font-family: $fontTitleLight
+  font-size: 5rem
+  line-height: 5.2rem
+  font-weight: 200
+  @media only screen and (max-width : #{$breakpoint-xl})
+    font-size: 4rem
+    line-height: 4.2rem
+  @media only screen and (max-width : #{$breakpoint-l})
+    font-size: 3rem
+    line-height: 3.2rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 2.2rem
+    line-height: 2.4rem
+
+
+=title_l
+  font-family: $fontTitleLight
+  font-size: 4rem
+  line-height: 4.2rem
+  font-weight: 200
+  @media only screen and (max-width : #{$breakpoint-l})
+    font-size: 3rem
+    line-height: 3.2rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 2.2rem
+    line-height: 2.4rem
+
+=title_m
+  font-family: $fontTitleLight
+  font-size: 2rem
+  line-height: 2.6rem
+  font-weight: 200
+  @media only screen and (max-width : #{$breakpoint-l})
+    font-size: 1.8rem
+    line-height: 2rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 1.6rem
+    line-height: 2rem
+
+=title_s
+  font-family: $fontTitleLight
+  font-size: 4rem
+  line-height: 4.2rem
+  font-weight: 200
+
+// Subtitles 
+=subtitle_l
+  font-family: $fontTextBook
+  font-size: 2.2rem
+  line-height: 3rem
+  font-weight: 200
+  @media only screen and (max-width : #{$breakpoint-xl})
+    font-size: 2rem
+    line-height: 2.8rem
+  @media only screen and (max-width : #{$breakpoint-l})
+    font-size: 1.8rem
+    line-height: 2.4rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 1.4rem
+    line-height: 2rem
+
+=subtitle_m
+  font-family: $fontTextBook
+  font-size: 1.6rem
+  line-height: 2.4rem
+  font-weight: 200
+  @media only screen and (max-width : #{$breakpoint-l})
+    font-size: 1.4rem
+    line-height: 2rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 1.2rem
+    line-height: 2rem
+
+=subtitle_s
+  font-family: $fontTextBook
+  font-size: 1.4rem
+  line-height: 2.2rem
+  font-weight: 200
+
+// Meta
+=font_meta
+  font-family: $fontTextBook
+  font-size: 1.2rem
+  letter-spacing: 0.05rem
+  @media only screen and (max-width : #{$breakpoint-s})
+    font-size: 1rem

@@ -1,118 +1,15 @@
 @import normalize
 @import breakpoints
 @import spacing
+@import tools
+@import typography
+@import colors
 
-// Dirty Fonts
+// Header variables
 
-@font-face
-  font-family: 'Favorit-Light'
-  font-weight: 200
-  font-style: normal
-  src: url('/assets/fonts/Favorit-Light.woff ') format('woff')
+$menu_width: 280px
+$menu_width_mobile: 200px
 
-// Text Fonts ABC MArist
-
-@font-face
-  font-family: 'ABCMarist-Book'
-  font-weight: 400
-  font-style: normal
-  src: url('/assets/fonts/ABCMarist-Book.woff') format('woff')
-
-@font-face
-  font-family: 'test-tiempos-text-regular'
-  font-weight: 400
-  font-style: normal
-  src: url('/assets/fonts/test-tiempos-text-regular.woff2') format('woff2')
-
-@font-face
-  font-family: 'ABCMarist-BookItalic'
-  font-weight: 400
-  font-style: italic
-  src: url('/assets/fonts/ABCMarist-BookItalic.woff') format('woff')
-
-@font-face
-  font-family: 'ABCMarist-Medium'
-  font-weight: 600
-  font-style: normal
-  src: url('/assets/fonts/ABCMarist-Medium.woff') format('woff')
-
-@font-face
-  font-family: 'ABCMarist-SemiBold'
-  font-weight: 700
-  font-style: normal
-  src: url('/assets/fonts/ABCMarist-SemiBold.woff') format('woff')
-
-
-// Text Font Bradford hacked
-
-@font-face
-  font-family: 'BradfordLL-Book'
-  font-weight: 700
-  font-style: normal
-  src: url('/assets/fonts/BradfordLL-Book.woff2') format('woff2')
-
-@font-face
-  font-family: 'BradfordLL-Book'
-  font-weight: 700
-  font-style: normal
-  src: url('/assets/fonts/BradfordLL-Book.woff2') format('woff2')
-
-  @font-face
-  font-family: 'BradfordLL-Bold'
-  font-weight: 700
-  font-style: normal
-  src: url('/assets/fonts/BradfordLL-Bold.woff2') format('woff2')
-
-@font-face
-  font-family: 'BradfordLL-BoldItalic'
-  font-weight: 700
-  font-style: normal
-  src: url('/assets/fonts/BradfordLL-BoldItalic.woff2') format('woff2')
-
-// Font Variables
-
-$fontTitleLight: 'Favorit-Light', Helveica, Arial, sans-serif
-$fontTextBook: 'BradfordLL-Book', Georgia, 'Times New Roman', Times, serif
-$fontTextBold: 'BradfordLL-Bold', Georgia, 'Times New Roman', Times, serif
-  
-// Dirty Variables
-
-$content-width: 800px
-$max-width: 1920px
-
-$color-background: #F5F5F5
-
-$color-corp-green: #D3FE50
-$color-corp-darker: #3D3B3B
-$color-corp-dark: #878787
-$color-corp-light: #C5C5C5
-$color-corp-lighter: #F7F7F7
-
-$color-comp-green-01: #F1FFBA
-$color-comp-green-02: #FAFFE7
-
-$border-size: 2px
-
-// Dirty Mixins
-=reset
-  margin: 0
-  padding: 0
-  border: 0
-
-=reset_box
-  position: relative
-  display: inline-block
-  box-sizing: border-box
-  width: auto
-  height: auto
-  margin: 0
-  padding: 0
-  border: 0
-
-=hide_text
-  display : inline-block
-  overflow : hidden
-  text-indent : -1000em
 
 // Basic styles
 body
@@ -121,7 +18,7 @@ body
   -moz-osx-font-smoothing: grayscale
   text-rendering: optimizeLegibility
   font-family: sans-serif
-  background: #F7F6F2
+  background: $color-background
   
 .visually-hidden
   display: none
@@ -140,29 +37,37 @@ body
   box-shadow: 0 0 150px -50px rgba(0,0,0,.75)
   backface-visibility: hidden
   overflow: scroll
+  overflow-x: hidden
   -webkit-overflow-scrolling: touch
   &.open
     cursor: pointer
     overflow: hidden
-    transform: translate3d(280px, 100px, 0)
+    transform: translate3d(#{$menu_width}, 100px, 0)
     position: fixed
+    @media only screen and (max-width : #{$breakpoint-s})
+      transform: translate3d($menu_width_mobile, 80px, 0)
 
 header.global-menu
   +reset
   position: fixed
   top: 0
   left: 0
-  width: 270px
+  width: $menu_width
   height: 90px
   z-index: 1000
   overflow: hidden
   &.open
-    width: 380px
+    width: $menu_width
     height: 100vh
+    @media only screen and (max-width : #{$breakpoint-s})
+      width: $menu_width_mobile
   .toggler
     position: absolute
     top: $space-xs
     left: $space-l
+    @media only screen and (max-width : #{$breakpoint-s})
+      top: $space-xxs
+      left: $space-s
   .logo
     +reset_box
     +hide_text
@@ -173,6 +78,8 @@ header.global-menu
     background-size: 100% auto
     background-repeat: no-repeat
     background-position: left center
+    @media only screen and (max-width : #{$breakpoint-s})
+      width: 150px
     a
       display: inline-block
       overflow: hidden
@@ -181,14 +88,18 @@ header.global-menu
       width: 100%
       height: 100%
   .menu
+    +reset
     position: absolute
-    top: 80px
+    top: 100px
     left: -50px
-    width: 250px
+    width: $menu_width
     list-style: none
     text-align: right
     opacity: 0
     transition: all .3s ease-in-out
+    @media only screen and (max-width : #{$breakpoint-s})
+      width: $menu_width_mobile
+      top: 80px
     &.open
       opacity: 1
       left: 0
@@ -216,3 +127,9 @@ header.global-menu
     text-decoration: none
     &:hover
       text-decoration: underline
+
+.single-page
+  display: block
+  margin: auto
+  max-width: $max-width
+  padding: $space-l

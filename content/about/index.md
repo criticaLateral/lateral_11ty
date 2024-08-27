@@ -1,5 +1,5 @@
 ---
-layout: layouts/base.njk
+layout: layouts/page.njk
 eleventyNavigation:
   key: Info
   order: 3
@@ -7,3 +7,5 @@ eleventyNavigation:
 # Info
 
 Somos Lateral, fundado en 2024.
+
+

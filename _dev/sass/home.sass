@@ -8,13 +8,18 @@
     +reset
     display: grid
     grid-template-columns: 1fr 1fr 1fr
+    gap: $space-l
+    padding: $space-l
     justify-items: stretch
     align-items: stretch
-    border: calc( $border-size / 2 ) solid black
+    @media only screen and (max-width : #{$breakpoint-m})
+      padding: $space-s
+      gap: $space-s
+      grid-template-columns: 1fr
     .article
       +reset_box
       order: 1
-      border: calc( $border-size / 2 ) solid black
+      border: $border-size solid black
       a
         text-decoration: none
         display: flex
@@ -24,25 +29,32 @@
       &.featured
         grid-column: 1 / span 3
         order: 0
+        @media only screen and (max-width : #{$breakpoint-m})
+          grid-column: 1 / span 1
         a
           display: grid
           grid-template-columns: 2fr 1fr
+          @media only screen and (max-width : #{$breakpoint-m})
+            grid-template-columns: 1fr
         .article-image
           border: 0
+          @media only screen and (max-width : #{$breakpoint-m})
+            border-bottom: $border-size solid black
         .article-description
           border-left: $border-size solid black
+          @media only screen and (max-width : #{$breakpoint-m})
+            border: 0
           .article-title
-            font-size: 4rem
-            line-height: 4.2rem
+            +title_l
           .article-subtitle
-            font-size: 2rem
-            line-height: 2.6rem
+            +subtitle_m
       .article-description
         display: flex
         flex-direction: column
         flex-grow: 10
         .article-title
           +reset
+          +title_m
           display: flex
           flex-grow: 2
           padding: $space-s
@@ -50,13 +62,10 @@
           justify-content: center
           background: #E0D9CA
           color: #222
-          font-size: 2.2rem
-          line-height: 2.4rem
-          font-family: $fontTitleLight
-          font-weight: 200
           border-bottom: $border-size solid black
         .article-subtitle
           +reset
+          +subtitle_s
           padding: $space-s
           display: flex
           flex-grow: 2
@@ -65,10 +74,6 @@
           background: #E2E9E1
           color: #222222
           gap: $space-m
-          font-size: 1.2rem
-          line-height: 1.6rem
-          font-family: $fontTextBook
-          font-weight: 200
           border-bottom: $border-size solid black
         .article-meta
           +reset
@@ -76,20 +81,16 @@
           justify-content: center
           li
             +reset
+            +font_meta
             display: block
             flex-basis: 50%
             padding: $space-xs $space-s
-            font-family: $fontTextBook
-            font-size: 1rem
             color: $color-corp-darker
             &:first-of-type
               border-right: $border-size solid black
           &-author
             background: $color-comp-green-01
-            letter-spacing: 0.05rem
-            strong
-              font-family: $fontTextBook
-              font-variant: small-caps
+            font-variant: small-caps
           &-date
             background: $color-comp-green-02
             font-style: italic

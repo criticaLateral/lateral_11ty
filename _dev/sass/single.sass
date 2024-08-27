@@ -12,6 +12,8 @@
     display: grid
     &.portrait
       grid-template-columns: 1fr 1fr
+      @media only screen and (max-width : #{$breakpoint-l})
+        grid-template-columns: 1fr
       .article-header-content
         height: 100%
         display: grid
@@ -19,6 +21,8 @@
         grid-template-rows: 10fr 10fr max-content
       .article-title
         border-bottom: $border-size solid black
+        @media only screen and (max-width : #{$breakpoint-l})
+          order: 0
       .article-subtitle
         border-bottom: $border-size solid black
       &.left
@@ -40,12 +44,22 @@
         display: grid
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr max-content
+        @media only screen and (max-width : #{$breakpoint-l})
+          grid-template-columns: 1fr
       .article-title
         border-bottom: $border-size solid black
+        @media only screen and (max-width : #{$breakpoint-l})
+          order: 0
       .article-subtitle
         border-left: $border-size solid black
         grid-column: 2 / 2
         grid-row: 1 / span 2
+        @media only screen and (max-width : #{$breakpoint-l})
+          grid-column: 1 / 1
+          grid-row: 2 / 2
+          border-bottom: $border-size solid black
+          border-left: 0
+          order: 1
       &.top
         .article-header-image
           order: 0
@@ -55,6 +69,8 @@
       &.bottom
         .article-header-image
           order: 1
+          @media only screen and (max-width : #{$breakpoint-l})
+            border-bottom: $border-size solid black
         .article-header-content
           border-bottom: $border-size solid black
           order: 0
@@ -71,9 +87,21 @@
   &-body
     max-width: $content-width
     margin: auto
+    @media only screen and (max-width : #{$breakpoint-l})
+      padding: 0 $space-xl
+    @media only screen and (max-width : #{$breakpoint-m})
+      padding: 0 $space-l
+    @media only screen and (max-width : #{$breakpoint-s})
+      padding: 0 $space-m
   &-footer
     max-width: $content-width
     margin: auto
+    @media only screen and (max-width : #{$breakpoint-l})
+      padding: 0 $space-xl
+    @media only screen and (max-width : #{$breakpoint-m})
+      padding: 0 $space-l
+    @media only screen and (max-width : #{$breakpoint-s})
+      padding: 0 $space-m
 
 // Content
 
@@ -85,12 +113,11 @@
   justify-content: center
   background: #E0D9CA
   color: #222
+  @media only screen and (max-width : #{$breakpoint-l})
+    padding: $space-xs $space-s
   h1
     +reset
-    font-size: 5rem
-    font-family: $fontTitleLight
-    font-weight: 200
-    line-height: 5rem
+    +title_xl
 .article-subtitle
   +reset
   padding: $space-m $space-xl
@@ -99,35 +126,38 @@
   justify-content: center
   background: #E2E9E1
   color: #222222
-  gap: $space-m
+  @media only screen and (max-width : #{$breakpoint-l})
+    padding: $space-xs $space-s
   p
-    +reset
-    font-size: 2rem
-    line-height: 3rem
-    font-family: $fontTextBook
-    font-weight: 200
+    +subtitle_l
 .article-meta
   +reset
   display: flex
   justify-content: center
+  @media only screen and (max-width : #{$breakpoint-s})
+    flex-direction: column
   li
     +reset
     display: block
     flex-basis: 50%
     padding: $space-s $space-xl
     font-family: $fontTextBook
-    font-size: 1.3rem
     color: $color-corp-darker
+    @media only screen and (max-width : #{$breakpoint-s})
+      padding: $space-xs $space-s
     &:first-of-type
       border-right: $border-size solid black
+      @media only screen and (max-width : #{$breakpoint-s})
+        border-right: 0
+        border-bottom: $border-size solid black
   &-author
     background: $color-comp-green-01
-    letter-spacing: 0.05rem
+    +font_meta
     strong
-      font-family: $fontTextBook
       font-variant: small-caps
   &-date
     background: $color-comp-green-02
+    +font_meta
     font-style: italic
 
 
@@ -158,6 +188,15 @@
     font-size: 1.6rem
     line-height: 2.8rem
     margin-bottom: $space-xl
+    @media only screen and (max-width : #{$breakpoint-xl})
+      font-size: 1.4rem
+      line-height: 2.6rem
+    @media only screen and (max-width : #{$breakpoint-m})
+      font-size: 1.3rem
+      line-height: 2.2rem
+    @media only screen and (max-width : #{$breakpoint-s})
+      font-size: 1.1rem
+      line-height: 2.2rem
   .header-anchor
     text-decoration: none
     color: #222
@@ -173,9 +212,22 @@
     border-bottom: $border-size solid black
     transform: translateX(-100px)
     padding-right: $space-xl
+    @media only screen and (max-width : #{$breakpoint-m})
+      margin: $space-xl 0
+      transform: translateX(0)
+      padding-right: $space-s
     p
       font-size: 2.5rem
       line-height: 3.4rem
+      @media only screen and (max-width : #{$breakpoint-xl})
+        font-size: 2rem
+        line-height: 3.2rem
+      @media only screen and (max-width : #{$breakpoint-m})
+        font-size: 1.8rem
+        line-height: 2.8rem
+      @media only screen and (max-width : #{$breakpoint-s})
+        font-size: 1.4rem
+        line-height: 2.8rem
   p picture
     +reset
     width: 120%
@@ -199,10 +251,19 @@
   gap: $space-xl
   font-family: $fontTitleLight
   text-transform: uppercase
+  @media only screen and (max-width : #{$breakpoint-l})
+    padding: $space-xxl $space-xl
+  @media only screen and (max-width : #{$breakpoint-m})
+    padding: $space-xxl $space-l
+    grid-template-columns: 1fr
+  @media only screen and (max-width : #{$breakpoint-s})
+    padding: $space-xxl $space-m
   time
     grid-column: 1 / span 2
     text-align: center
     font-size: 1.3rem
+    @media only screen and (max-width : #{$breakpoint-m})
+      grid-column: 1
   a
     text-decoration: none
     color: #222
@@ -211,10 +272,14 @@
   p
     +reset
     font-size: 1.2rem
+    @media only screen and (max-width : #{$breakpoint-m})
+      text-align: center
   ul
     +reset
     list-style: none
     text-align: right
+    @media only screen and (max-width : #{$breakpoint-m})
+      text-align: center
     li
       font-size: 1.2rem
   small
@@ -225,6 +290,8 @@
     grid-column: 1 / span 2
     text-align: center
     font-size: 1rem
+    @media only screen and (max-width : #{$breakpoint-m})
+      grid-column: 1
 
 .related
   display: block
@@ -235,12 +302,20 @@
   grid-template-columns: 1fr 1fr 1fr 1fr
   gap: $space-l
   margin-bottom: $space-xxl
+  @media only screen and (max-width : #{$breakpoint-xl})
+    grid-template-columns: 1fr 1fr
+  @media only screen and (max-width : #{$breakpoint-s})
+    grid-template-columns: 1fr
   .related-header
     grid-column: 1 / span 4
     text-align: center
     font-size: 2rem
     font-family: $fontTitleLight
     text-transform: uppercase
+    @media only screen and (max-width : #{$breakpoint-xl})
+      grid-column: 1 / span 2
+    @media only screen and (max-width : #{$breakpoint-s})
+      grid-column: 1
   .related-article
     border: $border-size solid black
     a
