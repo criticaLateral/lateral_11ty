@@ -10,24 +10,23 @@
 		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ metadata.title }}">
 
 		<link rel="stylesheet" href="/assets/css/app.css">
-		<script src="/assets/js/menu.js"></script>
 	</head>
-	<body id="body" class="global">
+	<body id="body" class="global" data-barba="wrapper">
 		<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-    <header id="header" class="global-menu">
-      <nav  class="navigation">
-      	<a href="#" id="menuToggler" class="toggler"><h1 class="logo">{{ metadata.title }}</h1></a>
+		<header id="header" class="global-menu">
+			<nav  class="navigation">
+				<a href="#" id="menuToggler" class="toggler"><h1 class="logo">{{ metadata.title }}</h1></a>
 				<ul id="menuContent" class="menu">
 					<h2 class="visually-hidden">Top level navigation menu</h2>
 					{%- for entry in collections.all | eleventyNavigation %}
 						<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
 					{%- endfor %}
-        </ul>
-      </nav>
-    </header>
+				</ul>
+			</nav>
+		</header>
 
-		<section id="scroll">
+		<section id="scroll" data-barba="container">
 
 			<main class="global-content" id="skip">
 				{{ content | safe }}
@@ -39,6 +38,10 @@
 
 		</section>
 
+		{# <script src="/assets/js/barba.core.js"></script>
+		<script src="/assets/js/transitions.js"></script>
+		<script src="/assets/js/anime.min.js"></script> #}
+		<script src="/assets/js/menu.js"></script>
 		<!-- This page `{{ page.url | htmlBaseUrl }}` was built on {% currentBuildDate %} -->
 	</body>
 </html>

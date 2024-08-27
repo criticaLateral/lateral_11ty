@@ -351,6 +351,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 #scroll.open {
   cursor: pointer;
@@ -682,6 +683,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 #scroll.open {
   cursor: pointer;
@@ -1253,6 +1255,7 @@ body {
   overflow: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 #scroll.open {
   cursor: pointer;

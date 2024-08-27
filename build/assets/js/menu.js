@@ -33,6 +33,7 @@
         
         menu_toggler.addEventListener('click', function(){
             var item = body.classList.contains('locked')
+            console.log('clicked');
             if ( item ){
                 closeMenu()
             } else {
