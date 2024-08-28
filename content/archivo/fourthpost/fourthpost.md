@@ -1,5 +1,5 @@
 ---
-title: 'Fasinación'
+title: 'Fascinación'
 description: 'Esta canción tan triste me ayudó a salir de la melancolía de haber intuido esa vida que podría ser pero jamás será, que en general se oculta detrás de las canciones y los pasos delicados de un joven hermoso que podría ser un fantasma de paseo durante alguna tarde gris. Tumbas de cemento, piedras que se convierten en óxido, el milagro del color en las autopistas'
 author: 'Álvaro Bisama'
 date: 2018-05-01
