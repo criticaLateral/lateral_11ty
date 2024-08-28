@@ -7,7 +7,7 @@
   &-header
     width: 100%
     margin-bottom: $space-xxl
-    border: $border-size solid black
+    border: $border-size solid $border-color
     display: grid
     box-shadow: 10px 10px 0 rgba(0,0,0,0.1)
     &.portrait
@@ -20,21 +20,21 @@
         grid-template-columns: 1fr
         grid-template-rows: 10fr 10fr max-content
       .article-title
-        border-bottom: $border-size solid black
+        border-bottom: $border-size solid $border-color
         @media only screen and (max-width : #{$breakpoint-l})
           order: 0
       .article-subtitle
-        border-bottom: $border-size solid black
+        border-bottom: $border-size solid $border-color
       &.left
         .article-header-image
           order: 0
-          border-right: $border-size solid black
+          border-right: $border-size solid $border-color
         .article-header-content
           order: 1
       &.right
         .article-header-image
           order: 1
-          border-left: $border-size solid black
+          border-left: $border-size solid $border-color
         .article-header-content
           order: 0
     &.landscape
@@ -47,32 +47,32 @@
         @media only screen and (max-width : #{$breakpoint-l})
           grid-template-columns: 1fr
       .article-title
-        border-bottom: $border-size solid black
+        border-bottom: $border-size solid $border-color
         @media only screen and (max-width : #{$breakpoint-l})
           order: 0
       .article-subtitle
-        border-left: $border-size solid black
+        border-left: $border-size solid $border-color
         grid-column: 2 / 2
         grid-row: 1 / span 2
         @media only screen and (max-width : #{$breakpoint-l})
           grid-column: 1 / 1
           grid-row: 2 / 2
-          border-bottom: $border-size solid black
+          border-bottom: $border-size solid $border-color
           border-left: 0
           order: 1
       &.top
         .article-header-image
           order: 0
-          border-bottom: $border-size solid black
+          border-bottom: $border-size solid $border-color
         .article-header-content
           order: 1
       &.bottom
         .article-header-image
           order: 1
           @media only screen and (max-width : #{$breakpoint-l})
-            border-bottom: $border-size solid black
+            border-bottom: $border-size solid $border-color
         .article-header-content
-          border-bottom: $border-size solid black
+          border-bottom: $border-size solid $border-color
           order: 0
     &-image
       display: flex
@@ -141,10 +141,10 @@
     @media only screen and (max-width : #{$breakpoint-s})
       padding: $space-xs $space-s
     &:first-of-type
-      border-right: $border-size solid black
+      border-right: $border-size solid $border-color
       @media only screen and (max-width : #{$breakpoint-s})
         border-right: 0
-        border-bottom: $border-size solid black
+        border-bottom: $border-size solid $border-color
   &-author
     +font_meta
     strong
@@ -154,6 +154,8 @@
     font-style: italic
 
 .article-body 
+  @media (prefers-color-scheme: dark)
+    color: white
   h1, h2, h3, h4, h5, h6
     font-family: $fontTextBook
     margin-bottom: $space-xl
@@ -200,8 +202,8 @@
     border: 0
     border-bottom: 1px dotted #ccc
   blockquote
-    border-right: $border-size solid black
-    border-bottom: $border-size solid black
+    border-right: $border-size solid $border-color
+    border-bottom: $border-size solid $border-color
     transform: translateX(-100px)
     padding-right: $space-xl
     box-shadow: 10px 10px 0 rgba(0,0,0,0.1)
@@ -233,7 +235,7 @@
 
 .article-footer
   padding: $space-xxl 0
-  border-bottom: $border-size solid black
+  border-bottom: $border-size solid $border-color
   margin-bottom: $space-l
   background-image: url('/assets/media/gui/colofon.svg')
   background-repeat: no-repeat
@@ -310,7 +312,7 @@
     @media only screen and (max-width : #{$breakpoint-s})
       grid-column: 1
   .related-article
-    border: $border-size solid black
+    border: $border-size solid $border-color
     box-shadow: 10px 10px 0 rgba(0,0,0,0.1)
     a
       height: 100%
@@ -337,11 +339,11 @@
       line-height:2rem
       font-family: $fontTitleLight
       font-weight: 200
-      border-top: $border-size solid black
+      border-top: $border-size solid $border-color
     .related-meta
       +reset
       display: flex
-      border-top: $border-size solid black
+      border-top: $border-size solid $border-color
       justify-content: center
       li
         +reset
@@ -352,7 +354,7 @@
         flex-grow: 1
         flex-shrink: 1
         &:first-of-type
-          border-right: $border-size solid black
+          border-right: $border-size solid $border-color
       &-author
         letter-spacing: 0.05rem
         strong
