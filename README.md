@@ -20,6 +20,7 @@ npm install npm-run-all --save-dev
 
 
 ## MD structure for a post (example):
+```
 ---
 title: string
 description: string
@@ -37,3 +38,4 @@ color: green, yellow, orange, cyan, fucsia, purple, blue, pink
 permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: boolean
 ---
+```
