@@ -17,3 +17,23 @@ npm install npm-run-all --save-dev
 ## Referencias
 
 - <https://www.11ty.dev/>
+
+
+## MD structure for a post (example):
+---
+title: string
+description: string
+author: string
+date: 2018-05-01
+tags:
+  - Author
+  - Tag 1
+  - Tag 2
+extraCredits: string
+featured_image: filename.jpg
+thumbnail_image: filename.jpg
+template: landscape bottom, landscape top, portrait left, portrait right
+color: green, yellow, orange, cyan, fucsia, purple, blue, pink
+permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
+isFeatured: boolean
+---
