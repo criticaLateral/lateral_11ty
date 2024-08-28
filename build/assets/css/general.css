@@ -160,100 +160,132 @@ template, [hidden] {
   font-style: normal;
   src: url("/assets/fonts/test-tiempos-text-regular.woff2") format("woff2");
 }
-.article-header.green .article-title, .article-description.green .article-title {
+.article-header.green .article-title, .article-header.green .related-title, .article-description.green .article-title, .article-description.green .related-title, .related-article.green .article-title, .related-article.green .related-title {
+  color: black;
   background-color: #C8FF00;
 }
-.article-header.green .article-subtitle, .article-description.green .article-subtitle {
+.article-header.green .article-subtitle, .article-description.green .article-subtitle, .related-article.green .article-subtitle {
+  color: black;
   background-color: #E9FF99;
 }
-.article-header.green .article-meta-author, .article-description.green .article-meta-author {
+.article-header.green .article-meta-author, .article-header.green .related-meta-author, .article-description.green .article-meta-author, .article-description.green .related-meta-author, .related-article.green .article-meta-author, .related-article.green .related-meta-author {
+  color: black;
   background-color: #DEFF66;
 }
-.article-header.green .article-meta-date, .article-description.green .article-meta-date {
+.article-header.green .article-meta-date, .article-header.green .related-meta-date, .article-description.green .article-meta-date, .article-description.green .related-meta-date, .related-article.green .article-meta-date, .related-article.green .related-meta-date {
+  color: black;
   background-color: #EEFFB2;
 }
-.article-header.yellow .article-title, .article-description.yellow .article-title {
+.article-header.yellow .article-title, .article-header.yellow .related-title, .article-description.yellow .article-title, .article-description.yellow .related-title, .related-article.yellow .article-title, .related-article.yellow .related-title {
+  color: black;
   background-color: #ffdc00;
 }
-.article-header.yellow .article-subtitle, .article-description.yellow .article-subtitle {
+.article-header.yellow .article-subtitle, .article-description.yellow .article-subtitle, .related-article.yellow .article-subtitle {
+  color: black;
   background-color: #fff199;
 }
-.article-header.yellow .article-meta-author, .article-description.yellow .article-meta-author {
+.article-header.yellow .article-meta-author, .article-header.yellow .related-meta-author, .article-description.yellow .article-meta-author, .article-description.yellow .related-meta-author, .related-article.yellow .article-meta-author, .related-article.yellow .related-meta-author {
+  color: black;
   background-color: #ffea66;
 }
-.article-header.yellow .article-meta-date, .article-description.yellow .article-meta-date {
+.article-header.yellow .article-meta-date, .article-header.yellow .related-meta-date, .article-description.yellow .article-meta-date, .article-description.yellow .related-meta-date, .related-article.yellow .article-meta-date, .related-article.yellow .related-meta-date {
+  color: black;
   background-color: #eeffb2;
 }
-.article-header.orange .article-title, .article-description.orange .article-title {
+.article-header.orange .article-title, .article-header.orange .related-title, .article-description.orange .article-title, .article-description.orange .related-title, .related-article.orange .article-title, .related-article.orange .related-title {
+  color: black;
   background-color: #ffa700;
 }
-.article-header.orange .article-subtitle, .article-description.orange .article-subtitle {
+.article-header.orange .article-subtitle, .article-description.orange .article-subtitle, .related-article.orange .article-subtitle {
+  color: black;
   background-color: #ffdc99;
 }
-.article-header.orange .article-meta-author, .article-description.orange .article-meta-author {
+.article-header.orange .article-meta-author, .article-header.orange .related-meta-author, .article-description.orange .article-meta-author, .article-description.orange .related-meta-author, .related-article.orange .article-meta-author, .related-article.orange .related-meta-author {
+  color: black;
   background-color: #ffca66;
 }
-.article-header.orange .article-meta-date, .article-description.orange .article-meta-date {
+.article-header.orange .article-meta-date, .article-header.orange .related-meta-date, .article-description.orange .article-meta-date, .article-description.orange .related-meta-date, .related-article.orange .article-meta-date, .related-article.orange .related-meta-date {
+  color: black;
   background-color: #ffe5b2;
 }
-.article-header.cyan .article-title, .article-description.cyan .article-title {
+.article-header.cyan .article-title, .article-header.cyan .related-title, .article-description.cyan .article-title, .article-description.cyan .related-title, .related-article.cyan .article-title, .related-article.cyan .related-title {
+  color: black;
   background-color: #1affd3;
 }
-.article-header.cyan .article-subtitle, .article-description.cyan .article-subtitle {
+.article-header.cyan .article-subtitle, .article-description.cyan .article-subtitle, .related-article.cyan .article-subtitle {
+  color: black;
   background-color: #bafff2;
 }
-.article-header.cyan .article-meta-author, .article-description.cyan .article-meta-author {
+.article-header.cyan .article-meta-author, .article-header.cyan .related-meta-author, .article-description.cyan .article-meta-author, .article-description.cyan .related-meta-author, .related-article.cyan .article-meta-author, .related-article.cyan .related-meta-author {
+  color: black;
   background-color: #a3ffed;
 }
-.article-header.cyan .article-meta-date, .article-description.cyan .article-meta-date {
+.article-header.cyan .article-meta-date, .article-header.cyan .related-meta-date, .article-description.cyan .article-meta-date, .article-description.cyan .related-meta-date, .related-article.cyan .article-meta-date, .related-article.cyan .related-meta-date {
+  color: black;
   background-color: #d1fff6;
 }
-.article-header.fucsia .article-title, .article-description.fucsia .article-title {
+.article-header.fucsia .article-title, .article-header.fucsia .related-title, .article-description.fucsia .article-title, .article-description.fucsia .related-title, .related-article.fucsia .article-title, .related-article.fucsia .related-title {
+  color: black;
   background-color: #ff266c;
 }
-.article-header.fucsia .article-subtitle, .article-description.fucsia .article-subtitle {
+.article-header.fucsia .article-subtitle, .article-description.fucsia .article-subtitle, .related-article.fucsia .article-subtitle {
+  color: black;
   background-color: #ffbed3;
 }
-.article-header.fucsia .article-meta-author, .article-description.fucsia .article-meta-author {
+.article-header.fucsia .article-meta-author, .article-header.fucsia .related-meta-author, .article-description.fucsia .article-meta-author, .article-description.fucsia .related-meta-author, .related-article.fucsia .article-meta-author, .related-article.fucsia .related-meta-author {
+  color: black;
   background-color: #ffa8c4;
 }
-.article-header.fucsia .article-meta-date, .article-description.fucsia .article-meta-date {
+.article-header.fucsia .article-meta-date, .article-header.fucsia .related-meta-date, .article-description.fucsia .article-meta-date, .article-description.fucsia .related-meta-date, .related-article.fucsia .article-meta-date, .related-article.fucsia .related-meta-date {
+  color: black;
   background-color: #ffd4e2;
 }
-.article-header.purple .article-title, .article-description.purple .article-title {
+.article-header.purple .article-title, .article-header.purple .related-title, .article-description.purple .article-title, .article-description.purple .related-title, .related-article.purple .article-title, .related-article.purple .related-title {
+  color: black;
   background-color: #be79ff;
 }
-.article-header.purple .article-subtitle, .article-description.purple .article-subtitle {
+.article-header.purple .article-subtitle, .article-description.purple .article-subtitle, .related-article.purple .article-subtitle {
+  color: black;
   background-color: #dfbcff;
 }
-.article-header.purple .article-meta-author, .article-description.purple .article-meta-author {
+.article-header.purple .article-meta-author, .article-header.purple .related-meta-author, .article-description.purple .article-meta-author, .article-description.purple .related-meta-author, .related-article.purple .article-meta-author, .related-article.purple .related-meta-author {
+  color: black;
   background-color: #d8afff;
 }
-.article-header.purple .article-meta-date, .article-description.purple .article-meta-date {
+.article-header.purple .article-meta-date, .article-header.purple .related-meta-date, .article-description.purple .article-meta-date, .article-description.purple .related-meta-date, .related-article.purple .article-meta-date, .related-article.purple .related-meta-date {
+  color: black;
   background-color: #ebd7ff;
 }
-.article-header.blue .article-title, .article-description.blue .article-title {
+.article-header.blue .article-title, .article-header.blue .related-title, .article-description.blue .article-title, .article-description.blue .related-title, .related-article.blue .article-title, .related-article.blue .related-title {
+  color: black;
   background-color: #96d2ff;
 }
-.article-header.blue .article-subtitle, .article-description.blue .article-subtitle {
+.article-header.blue .article-subtitle, .article-description.blue .article-subtitle, .related-article.blue .article-subtitle {
+  color: black;
   background-color: #d5edff;
 }
-.article-header.blue .article-meta-author, .article-description.blue .article-meta-author {
+.article-header.blue .article-meta-author, .article-header.blue .related-meta-author, .article-description.blue .article-meta-author, .article-description.blue .related-meta-author, .related-article.blue .article-meta-author, .related-article.blue .related-meta-author {
+  color: black;
   background-color: #c0e4ff;
 }
-.article-header.blue .article-meta-date, .article-description.blue .article-meta-date {
+.article-header.blue .article-meta-date, .article-header.blue .related-meta-date, .article-description.blue .article-meta-date, .article-description.blue .related-meta-date, .related-article.blue .article-meta-date, .related-article.blue .related-meta-date {
+  color: black;
   background-color: #dff1ff;
 }
-.article-header.pink .article-title, .article-description.pink .article-title {
+.article-header.pink .article-title, .article-header.pink .related-title, .article-description.pink .article-title, .article-description.pink .related-title, .related-article.pink .article-title, .related-article.pink .related-title {
+  color: black;
   background-color: #ff64ff;
 }
-.article-header.pink .article-subtitle, .article-description.pink .article-subtitle {
+.article-header.pink .article-subtitle, .article-description.pink .article-subtitle, .related-article.pink .article-subtitle {
+  color: black;
   background-color: #ffc1ff;
 }
-.article-header.pink .article-meta-author, .article-description.pink .article-meta-author {
+.article-header.pink .article-meta-author, .article-header.pink .related-meta-author, .article-description.pink .article-meta-author, .article-description.pink .related-meta-author, .related-article.pink .article-meta-author, .related-article.pink .related-meta-author {
+  color: black;
   background-color: #ffa2ff;
 }
-.article-header.pink .article-meta-date, .article-description.pink .article-meta-date {
+.article-header.pink .article-meta-date, .article-header.pink .related-meta-date, .article-description.pink .article-meta-date, .article-description.pink .related-meta-date, .related-article.pink .article-meta-date, .related-article.pink .related-meta-date {
+  color: black;
   background-color: #ffd0ff;
 }
 

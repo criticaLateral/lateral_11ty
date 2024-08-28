@@ -89,7 +89,7 @@ isFeatured: boolean
 	{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 	{% set postslistCounter = postsCount %}
 	{%- for post in postslist %}
-		<article class="related-article">
+		<article class="related-article {{ post.data.color }}">
 			<a href="{{ post.url }}">
 				{% if post.data.thumbnail_image %}
 					<figure class="related-image">
