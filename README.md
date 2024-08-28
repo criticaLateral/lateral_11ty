@@ -6,6 +6,7 @@
 npm install @11ty/eleventy
 npm install sass --save-dev
 npm install npm-run-all --save-dev
+npm i
 ```
 
 ## Correr el proyecto localmente
