@@ -19,9 +19,9 @@ npm i
 
 - <https://www.11ty.dev/>
 
+## MD structure for a post (example)
 
-## MD structure for a post (example):
-```
+```yaml
 ---
 title: string
 description: string
