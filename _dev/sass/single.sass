@@ -328,6 +328,10 @@
         object-fit: cover
         width: 100%
         height: auto
+        transition: filter .3s ease-in-out
+        filter: grayscale(100)
+        &:hover
+          filter: grayscale(0)
     .related-title
       +reset
       display: flex

@@ -18,20 +18,9 @@ numberOfLatestPostsToShow: 4
 	<article class="article {% if post.data.isFeatured == true %}featured{% endif %}">
 		<a href="{{ post.url }}">
  			{% if post.data.isFeatured == true %}
-				<svg class="article-image" viewBox="0 0 1 1">
-					<defs>
-						<filter id="filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-							<feMorphology operator="dilate" radius="10 0" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="morphology1"></feMorphology>
-						</filter>
-						<filter id="filter-2" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-							<feMorphology operator="dilate" radius="10 2" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="morphology1"></feMorphology>
-						</filter>
-						<filter id="filter-3" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
-							<feMorphology operator="dilate" radius="15 0" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" result="morphology1"></feMorphology>
-						</filter>
-					</defs>
-					<image class="article-media" x="0%" y="0%" preserveAspectRatio="xMidYMid slice" xlink:href="/assets/media/articles-featured/{{ post.data.thumbnail_image }}" id="glitch"></image>
-				</svg>
+					<figure class="article-image">
+						<img class="article-media" src="/assets/media/articles-featured/{{ post.data.thumbnail_image }}"/>
+					</figure>
 			{% else %}
 				{% if post.data.thumbnail_image %}
 					<figure class="article-image">
@@ -40,9 +29,9 @@ numberOfLatestPostsToShow: 4
 				{% endif %}
 			{% endif %}
 			<div class="article-description {{ post.data.color }}">
-				<h3 class="article-title">{{ post.data.title }}</h3>
+				<h3 class="article-title" style="background-color:{{ post.data.color_title }}; color:{{ post.data.color_text }}!important;">{{ post.data.title }}</h3>
 				{% if post.data.description %}
-					<p class="article-subtitle">{{ post.data.description }}</p>
+					<p class="article-subtitle" style="background-color:{{ post.data.color_subtitle }}; color:{{ post.data.color_text }}!important;">{{ post.data.description }}</p>
 				{% endif %}
 				<ul class="article-meta">
 					<li class="article-meta-author">{{ post.data.author }}</li>

@@ -10,7 +10,10 @@ extraCredits: 'Fotografias por Pablo Noel'
 featured_image: 04_featured.jpg
 thumbnail_image: 04_thumb.jpg
 template: portrait left
-color: green
+color: pink
+color_text: 'black'
+color_title: '#3B599C'
+color_subtitle: '#94734B'
 permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: false
 ---

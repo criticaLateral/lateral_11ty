@@ -2366,6 +2366,11 @@ header.global-menu .menu li a:hover {
   object-fit: cover;
   width: 100%;
   height: auto;
+  transition: filter 0.3s ease-in-out;
+  filter: grayscale(100);
+}
+.related .related-article .related-image img:hover {
+  filter: grayscale(0);
 }
 .related .related-article .related-title {
   margin: 0;

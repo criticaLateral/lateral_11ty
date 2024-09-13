@@ -11,7 +11,7 @@ extraCredits: 'Fotografias por Pablo Noel'
 featured_image: 01_featured.jpg
 thumbnail_image: 01_thumb.jpg
 template: landscape bottom
-color: yellow
+color: orange
 permalink: 'archivo/{{ title | slugify }}-{{ date | slugDate }}/'
 isFeatured: true
 ---
