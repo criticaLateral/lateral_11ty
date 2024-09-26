@@ -298,13 +298,7 @@ body {
 #scroll.open {
   cursor: pointer;
   overflow: hidden;
-  transform: translate3d(280px, 100px, 0);
   position: fixed;
-}
-@media only screen and (max-width: 767px) {
-  #scroll.open {
-    transform: translate3d(200px, 80px, 0);
-  }
 }
 
 header.global-menu {
@@ -314,30 +308,27 @@ header.global-menu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 280px;
+  width: 100%;
   height: 90px;
   z-index: 1000;
   overflow: hidden;
-}
-header.global-menu.open {
-  width: 280px;
-  height: 100vh;
+  background: white;
+  transition: height 1s cubic-bezier(1, -0.1, 0.265, 1.1), border-radius 1s cubic-bezier(1, -0.55, 0.265, 1.55);
+  border-radius: 0;
 }
 @media only screen and (max-width: 767px) {
-  header.global-menu.open {
-    width: 200px;
+  header.global-menu {
+    height: 70px;
   }
+}
+header.global-menu.open {
+  height: 85vh;
+  border-radius: 0 0 50vh 100vh;
 }
 header.global-menu .toggler {
   position: absolute;
   top: 15px;
   left: 40px;
-}
-@media only screen and (max-width: 767px) {
-  header.global-menu .toggler {
-    top: 10px;
-    left: 20px;
-  }
 }
 header.global-menu .logo {
   position: relative;
@@ -359,11 +350,6 @@ header.global-menu .logo {
   background-repeat: no-repeat;
   background-position: left center;
 }
-@media only screen and (max-width: 767px) {
-  header.global-menu .logo {
-    width: 150px;
-  }
-}
 header.global-menu .logo a {
   display: inline-block;
   overflow: hidden;
@@ -378,7 +364,7 @@ header.global-menu .menu {
   border: 0;
   position: absolute;
   top: 100px;
-  left: -50px;
+  right: -50px;
   width: 280px;
   list-style: none;
   text-align: right;
@@ -387,21 +373,26 @@ header.global-menu .menu {
 }
 @media only screen and (max-width: 767px) {
   header.global-menu .menu {
-    width: 200px;
-    top: 80px;
+    top: auto;
+    bottom: 100px;
   }
 }
 header.global-menu .menu.open {
   opacity: 1;
-  left: 0;
+  right: 100px;
+}
+@media only screen and (max-width: 767px) {
+  header.global-menu .menu.open {
+    right: 10px;
+  }
 }
 header.global-menu .menu li {
   margin-bottom: 15px;
 }
 header.global-menu .menu li a {
-  color: #c0bfbc;
+  color: black;
   font-family: "Favorit-Light", Helveica, Arial, sans-serif;
-  font-size: 1.4rem;
+  font-size: 3rem;
   text-decoration: none;
   padding: 10px 30px 10px 10px;
   transition: padding 0.3s ease-in-out;
@@ -810,6 +801,11 @@ header.global-menu .menu li a:hover {
   vertical-align: super;
   font-size: 1.2rem;
 }
+@media (prefers-color-scheme: dark) {
+  .article-body .header-anchor {
+    color: white;
+  }
+}
 .article-body hr {
   display: block;
   margin: 80px 0;
@@ -828,6 +824,11 @@ header.global-menu .menu li a:hover {
     margin: 50px 0;
     transform: translateX(0);
     padding-right: 20px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .article-body blockquote {
+    border-color: white;
   }
 }
 .article-body blockquote p {
@@ -880,6 +881,12 @@ header.global-menu .menu li a:hover {
   font-family: "Favorit-Light", Helveica, Arial, sans-serif;
   text-transform: uppercase;
 }
+@media (prefers-color-scheme: dark) {
+  .article-footer {
+    color: white;
+    border-bottom: 2px solid white;
+  }
+}
 @media only screen and (max-width: 1023px) {
   .article-footer {
     padding: 80px 50px;
@@ -909,6 +916,11 @@ header.global-menu .menu li a:hover {
 .article-footer a {
   text-decoration: none;
   color: #222;
+}
+@media (prefers-color-scheme: dark) {
+  .article-footer a {
+    color: white;
+  }
 }
 .article-footer a:hover {
   text-decoration: underline;
@@ -972,6 +984,11 @@ header.global-menu .menu li a:hover {
 @media only screen and (max-width: 767px) {
   .related {
     grid-template-columns: 1fr;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .related {
+    color: white;
   }
 }
 .related .related-header {
@@ -1062,6 +1079,11 @@ header.global-menu .menu li a:hover {
 }
 .related .related-article .related-meta li:first-of-type {
   border-right: 2px solid #000000;
+}
+@media (prefers-color-scheme: dark) {
+  .related .related-article .related-meta li a {
+    color: white;
+  }
 }
 .related .related-article .related-meta-author {
   letter-spacing: 0.05rem;

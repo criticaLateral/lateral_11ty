@@ -196,6 +196,8 @@
     color: #222
     vertical-align: super
     font-size: 1.2rem
+    @media (prefers-color-scheme: dark)
+      color: white
   hr
     display: block
     margin: $space-xxl 0
@@ -211,6 +213,8 @@
       margin: $space-xl 0
       transform: translateX(0)
       padding-right: $space-s
+    @media (prefers-color-scheme: dark)
+      border-color: white
     p
       font-size: 2.5rem
       line-height: 3.4rem
@@ -246,6 +250,9 @@
   gap: $space-xl
   font-family: $fontTitleLight
   text-transform: uppercase
+  @media (prefers-color-scheme: dark)
+    color: white
+    border-bottom: $border-size solid white
   @media only screen and (max-width : #{$breakpoint-l})
     padding: $space-xxl $space-xl
   @media only screen and (max-width : #{$breakpoint-m})
@@ -262,6 +269,8 @@
   a
     text-decoration: none
     color: #222
+    @media (prefers-color-scheme: dark)
+      color: white
     &:hover
       text-decoration: underline
   p
@@ -301,6 +310,8 @@
     grid-template-columns: 1fr 1fr
   @media only screen and (max-width : #{$breakpoint-s})
     grid-template-columns: 1fr
+  @media (prefers-color-scheme: dark)
+    color: white
   .related-header
     grid-column: 1 / span 4
     text-align: center
@@ -359,6 +370,9 @@
         flex-shrink: 1
         &:first-of-type
           border-right: $border-size solid $border-color
+        @media (prefers-color-scheme: dark)
+          a
+            color: white
       &-author
         letter-spacing: 0.05rem
         strong

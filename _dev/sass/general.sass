@@ -44,32 +44,29 @@ body
   &.open
     cursor: pointer
     overflow: hidden
-    transform: translate3d(#{$menu_width}, 100px, 0)
     position: fixed
-    @media only screen and (max-width : #{$breakpoint-s})
-      transform: translate3d($menu_width_mobile, 80px, 0)
 
 header.global-menu
   +reset
   position: fixed
   top: 0
   left: 0
-  width: $menu_width
+  width: 100%
   height: 90px
   z-index: 1000
   overflow: hidden
+  background: white
+  transition: height 1s cubic-bezier(1, -0.1, 0.265, 1.1), border-radius 1s cubic-bezier(1, -0.550, 0.265, 1.550)
+  border-radius: 0
+  @media only screen and (max-width : #{$breakpoint-s})
+    height: 70px
   &.open
-    width: $menu_width
-    height: 100vh
-    @media only screen and (max-width : #{$breakpoint-s})
-      width: $menu_width_mobile
+    height: 85vh
+    border-radius: 0 0 50vh 100vh
   .toggler
     position: absolute
     top: $space-xs
     left: $space-l
-    @media only screen and (max-width : #{$breakpoint-s})
-      top: $space-xxs
-      left: $space-s
   .logo
     +reset_box
     +hide_text
@@ -80,8 +77,6 @@ header.global-menu
     background-size: 100% auto
     background-repeat: no-repeat
     background-position: left center
-    @media only screen and (max-width : #{$breakpoint-s})
-      width: 150px
     a
       display: inline-block
       overflow: hidden
@@ -93,24 +88,26 @@ header.global-menu
     +reset
     position: absolute
     top: 100px
-    left: -50px
+    right: -50px
     width: $menu_width
     list-style: none
     text-align: right
     opacity: 0
     transition: all .3s ease-in-out
     @media only screen and (max-width : #{$breakpoint-s})
-      width: $menu_width_mobile
-      top: 80px
+      top: auto
+      bottom: 100px
     &.open
       opacity: 1
-      left: 0
+      right: 100px
+      @media only screen and (max-width : #{$breakpoint-s})
+        right: 10px
     li
       margin-bottom: 15px
       a
-        color: $color-corp-dark
+        color: black
         font-family: $fontTitleLight
-        font-size: 1.4rem
+        font-size: 3rem
         text-decoration: none
         padding: 10px 30px 10px 10px
         transition: padding .3s ease-in-out
